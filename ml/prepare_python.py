@@ -55,12 +55,13 @@ def make_weekly(obs,meta,include_macro=False,cutoff=None):
 
 def make_features(weekly,target='NASDAQCOM',horizon=4):
     if target not in weekly or horizon<1: raise ValueError('Invalid target or horizon')
-    out=pd.DataFrame(index=weekly.index)
+    columns={}
     for sid in weekly:
         base=weekly[sid].pct_change(fill_method=None)*100 if sid in PRICES else weekly[sid]
-        out[sid+'_return_1w' if sid in PRICES else sid+'_level']=base
-        for lag in [1,4,12]: out[f'{sid}_lag{lag}']=base.shift(lag)
-        if sid not in PRICES: out[sid+'_change_1w']=base.diff()
+        columns[sid+'_return_1w' if sid in PRICES else sid+'_level']=base
+        for lag in [1,4,12]: columns[f'{sid}_lag{lag}']=base.shift(lag)
+        if sid not in PRICES: columns[sid+'_change_1w']=base.diff()
+    out=pd.DataFrame(columns,index=weekly.index)
     # Future return is the target, never a feature. Caller may choose another target definition.
     out['target']=100*(weekly[target].shift(-horizon)/weekly[target]-1)
     out['target_end']=pd.Series(weekly.index,index=weekly.index).shift(-horizon)

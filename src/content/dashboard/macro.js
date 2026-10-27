@@ -6,7 +6,7 @@ export function indexed(rows,ids){
   const base=[...common.keys()].sort().find(d=>common.get(d).size===ids.length);
   if(!base)return [];
   const values=Object.fromEntries(rows.filter(r=>r.date===base).map(r=>[r.series_id,r.value]));
-  return rows.filter(r=>ids.includes(r.series_id)&&r.date>=base).map(r=>({...r,value:r.value==null?null:100*r.value/values[r.series_id],base_date:base}));
+  return rows.filter(r=>ids.includes(r.series_id)&&r.date>=base).map(r=>({...r,raw_value:r.value,baseline_value:values[r.series_id],value:r.value==null?null:100*r.value/values[r.series_id],base_date:base}));
 }
 export function yieldCurve(rows){
   const maturities={DGS3MO:0.25,DGS2:2,DGS5:5,DGS10:10,DGS30:30};
