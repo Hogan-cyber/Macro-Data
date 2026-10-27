@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis (DGS10)",
+  "source_last_updated": "Oct 26, 2026 3:16 PM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DGS10",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:26Z",
+  "sha256": "6f1214b2d8f0a85766b0b36b56147962c0d6ddf719d5db0c186504388cbfcd2d"
+}

@@ -1,0 +1,12 @@
+{
+  "unit": "Index 2017=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Personal Consumption Expenditures Excluding Food and Energy (Chain-Type Price Index) (PCEPILFE)",
+  "source_last_updated": "Sep 30, 2026 7:43 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/PCEPILFE",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:02Z",
+  "sha256": "5a726dbe1b86973eadb1ce376c96f3aad86ee34338266dd03eba6bb8b19fdb43"
+}

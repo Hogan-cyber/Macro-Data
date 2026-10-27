@@ -1,0 +1,12 @@
+{
+  "unit": "Millions of Dollars",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Advance Retail Sales: Retail Trade and Food Services (RSAFS)",
+  "source_last_updated": "Oct 15, 2026 7:38 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/RSAFS",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=RSAFS&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T06:34:43Z",
+  "sha256": "2d1047f95cdcb38cad5f9a0c344ddcc1ec2753e06938a8efc4d01e5b50c19d5a"
+}

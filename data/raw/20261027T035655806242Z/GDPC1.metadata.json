@@ -1,0 +1,12 @@
+{
+  "unit": "Billions of Chained 2017 Dollars",
+  "frequency": "Quarterly",
+  "seasonal_adjustment": "Seasonally Adjusted Annual Rate",
+  "source_title": "Real Gross Domestic Product (GDPC1)",
+  "source_last_updated": "Sep 30, 2026 7:53 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/GDPC1",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPC1&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:13Z",
+  "sha256": "4aedaa29bf938a4d214d86282486108e883d37edc001c7bb133cbf428cfbf1d6"
+}

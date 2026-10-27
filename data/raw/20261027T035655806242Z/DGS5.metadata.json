@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Market Yield on U.S. Treasury Securities at 5-Year Constant Maturity, Quoted on an Investment Basis (DGS5)",
+  "source_last_updated": "Oct 26, 2026 3:17 PM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DGS5",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:24Z",
+  "sha256": "756398482d04f99210e4d873450082cf2fae7c40cdae932191e10a72dae74353"
+}

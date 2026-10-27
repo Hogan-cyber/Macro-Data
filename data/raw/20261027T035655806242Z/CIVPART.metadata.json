@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Labor Force Participation Rate (CIVPART)",
+  "source_last_updated": "Oct 2, 2026 8:26 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/CIVPART",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CIVPART&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:07Z",
+  "sha256": "875a20940bc675b317a8d130f9871d327dc3df3d81df7f9af765c0afc75ea3b9"
+}

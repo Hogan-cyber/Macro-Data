@@ -1,0 +1,3 @@
+run_id,completed_at_utc,status,source_series,sources_updated,sources_failed,new_observations,revised_observations,total_valid_rows
+20261027T035655806242Z,2026-10-27T03:57:50Z,SUCCESS,44,44,0,133987,0,128900
+20261027T063438916595Z,2026-10-27T06:34:46Z,SUCCESS,44,44,0,0,0,128900

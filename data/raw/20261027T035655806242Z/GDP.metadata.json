@@ -1,0 +1,12 @@
+{
+  "unit": "Billions of Dollars",
+  "frequency": "Quarterly",
+  "seasonal_adjustment": "Seasonally Adjusted Annual Rate",
+  "source_title": "Gross Domestic Product (GDP)",
+  "source_last_updated": "Sep 30, 2026 7:54 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/GDP",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDP&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:14Z",
+  "sha256": "30691edf6a63763dffbcbf40b4a56a0bd1fa09336240b749264587b374db83f2"
+}

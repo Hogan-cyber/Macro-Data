@@ -1,0 +1,12 @@
+{
+  "unit": "Level in Thousands",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Job Openings: Total Nonfarm (JTSJOL)",
+  "source_last_updated": "Sep 29, 2026 9:11 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/JTSJOL",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=JTSJOL&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:11Z",
+  "sha256": "b2103436eb1f5cb9fe30ac9b65eb3d895f69758df1c52476778e50ac55027c53"
+}

@@ -1,0 +1,12 @@
+{
+  "unit": "Chinese Yuan Renminbi to One U.S. Dollar",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Chinese Yuan Renminbi to U.S. Dollar Spot Exchange Rate (DEXCHUS)",
+  "source_last_updated": "Oct 26, 2026 3:16 PM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DEXCHUS",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXCHUS&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T06:34:45Z",
+  "sha256": "35008db8a68491ed09553fecf3d48c808cefd11a9193f16e89578ce0719987f6"
+}

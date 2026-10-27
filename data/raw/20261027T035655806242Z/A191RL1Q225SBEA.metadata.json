@@ -1,0 +1,12 @@
+{
+  "unit": "Percent Change from Preceding Period",
+  "frequency": "Quarterly",
+  "seasonal_adjustment": "Seasonally Adjusted Annual Rate",
+  "source_title": "Real Gross Domestic Product (A191RL1Q225SBEA)",
+  "source_last_updated": "Sep 30, 2026 7:59 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/A191RL1Q225SBEA",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A191RL1Q225SBEA&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:13Z",
+  "sha256": "18a828e45a0ea12f3cab79af6012181731a8a0fde46dde12c0706942bcc076aa"
+}

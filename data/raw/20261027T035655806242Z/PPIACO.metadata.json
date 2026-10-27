@@ -1,0 +1,12 @@
+{
+  "unit": "Index 1982=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Producer Price Index by Commodity: All Commodities (PPIACO)",
+  "source_last_updated": "Oct 16, 2026 11:38 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/PPIACO",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PPIACO&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:03Z",
+  "sha256": "0b38ac1e7f1016f9fa05dfb8309f5db13a07df51f3695a67e7478815bc036f71"
+}

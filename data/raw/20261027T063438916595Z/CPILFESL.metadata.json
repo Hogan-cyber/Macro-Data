@@ -1,0 +1,12 @@
+{
+  "unit": "Index 1982-1984=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average (CPILFESL)",
+  "source_last_updated": "Oct 14, 2026 8:08 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/CPILFESL",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPILFESL&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T06:34:41Z",
+  "sha256": "cee9d58a10bd5ab614e24bb281722563f21003b7a6b9d5ebd05c8af6e2d9faac"
+}

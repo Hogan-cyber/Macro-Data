@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Employment-Population Ratio (EMRATIO)",
+  "source_last_updated": "Oct 2, 2026 8:26 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/EMRATIO",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=EMRATIO&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:07Z",
+  "sha256": "9b1c32ed564a79ad82fdb755d89e3e4673edf4c658eee5cd3078be17ab0054eb"
+}

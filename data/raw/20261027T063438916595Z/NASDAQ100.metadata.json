@@ -1,0 +1,12 @@
+{
+  "unit": "Index",
+  "frequency": "Daily, Close",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "NASDAQ-100 (NASDAQ100)",
+  "source_last_updated": "Oct 26, 2026 10:37 PM CDT",
+  "usage_note": "Third-party copyright: review source terms",
+  "source_url": "https://fred.stlouisfed.org/series/NASDAQ100",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQ100&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T06:34:44Z",
+  "sha256": "dcc50ec27b1f0213f5454d7660722c47a9199ac63b311cf80d3678aba09f6b21"
+}

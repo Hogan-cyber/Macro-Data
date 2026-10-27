@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Market Yield on U.S. Treasury Securities at 30-Year Constant Maturity, Quoted on an Investment Basis (DGS30)",
+  "source_last_updated": "Oct 26, 2026 3:16 PM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DGS30",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS30&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T06:34:44Z",
+  "sha256": "3c8082385e34d068a4c016827d2cd7961ab5d336e4c8acec9385303ee8b6f832"
+}

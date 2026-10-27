@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily, Close",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "ICE BofA US Corporate Index Option-Adjusted Spread (BAMLC0A0CM)",
+  "source_last_updated": "Oct 26, 2026 9:06 AM CDT",
+  "usage_note": "Third-party copyright: review source terms",
+  "source_url": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLC0A0CM&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T03:57:49Z",
+  "sha256": "6c7f0feb8b63e1a73f211bef237da8b3da4ea764caa493b894d4ab021e47d4b7"
+}

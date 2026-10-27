@@ -1,0 +1,12 @@
+{
+  "unit": "Index",
+  "frequency": "Daily, Close",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "S&P 500 (SP500)",
+  "source_last_updated": "Oct 26, 2026 1:29 PM CDT",
+  "usage_note": "Third-party copyright: review source terms",
+  "source_url": "https://fred.stlouisfed.org/series/SP500",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T06:34:44Z",
+  "sha256": "df7a380549fd3b95f1e72a85fe7889555aa79764c8058ae8433f0b835d5fd752"
+}

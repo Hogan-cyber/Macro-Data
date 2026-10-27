@@ -1,0 +1,12 @@
+{
+  "unit": "Thousands of Persons",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "All Employees, Total Nonfarm (PAYEMS)",
+  "source_last_updated": "Oct 2, 2026 8:24 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/PAYEMS",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYEMS&cosd=1999-01-01&coed=2026-10-27",
+  "retrieved_at_utc": "2026-10-27T06:34:42Z",
+  "sha256": "7bc1023e445b2b8fa4a551f2f482dd726d2c858e63f963169fa9764750b03c70"
+}
