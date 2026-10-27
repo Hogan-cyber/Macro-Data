@@ -1,0 +1,39 @@
+{
+  "initial_snapshot.json.gz": {
+    "sha256": "4e32e26cc9194634bd161a27544fe74ca3a061a32635caca265c563c764b1e10",
+    "parts": [
+      "initial_snapshot.json.gz.part000.b64",
+      "initial_snapshot.json.gz.part001.b64",
+      "initial_snapshot.json.gz.part002.b64",
+      "initial_snapshot.json.gz.part003.b64",
+      "initial_snapshot.json.gz.part004.b64",
+      "initial_snapshot.json.gz.part005.b64",
+      "initial_snapshot.json.gz.part006.b64",
+      "initial_snapshot.json.gz.part007.b64",
+      "initial_snapshot.json.gz.part008.b64",
+      "initial_snapshot.json.gz.part009.b64",
+      "initial_snapshot.json.gz.part010.b64",
+      "initial_snapshot.json.gz.part011.b64",
+      "initial_snapshot.json.gz.part012.b64",
+      "initial_snapshot.json.gz.part013.b64"
+    ]
+  },
+  "initial_sources.tar.gz": {
+    "sha256": "b92aeae1e68ff92b227e1e62c2f707344c826dc274c0269fb9cc083b83293ee2",
+    "parts": [
+      "initial_sources.tar.gz.part000.b64",
+      "initial_sources.tar.gz.part001.b64",
+      "initial_sources.tar.gz.part002.b64",
+      "initial_sources.tar.gz.part003.b64",
+      "initial_sources.tar.gz.part004.b64",
+      "initial_sources.tar.gz.part005.b64",
+      "initial_sources.tar.gz.part006.b64",
+      "initial_sources.tar.gz.part007.b64",
+      "initial_sources.tar.gz.part008.b64",
+      "initial_sources.tar.gz.part009.b64",
+      "initial_sources.tar.gz.part010.b64",
+      "initial_sources.tar.gz.part011.b64",
+      "initial_sources.tar.gz.part012.b64"
+    ]
+  }
+}

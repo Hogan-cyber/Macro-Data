@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.data-app-offline/
+.openai/
+__pycache__/
+*.pyc
+*.lock
+!package-lock.json
+data/backups/
+data/data/
+ml/output/
+.DS_Store

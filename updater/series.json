@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "default_start": "2000-01-01",
+  "timezone": "Asia/Hong_Kong",
+  "schedule_preference": "Monday 08:00 Asia/Hong_Kong; GitHub Actions",
+  "series": [
+    {
+      "id": "CPIAUCSL",
+      "sheet": "CPI_季调",
+      "label": "消费者价格指数（季调）",
+      "group": "通胀"
+    },
+    {
+      "id": "CPIAUCNS",
+      "sheet": "CPI_未季调",
+      "label": "消费者价格指数（未季调）",
+      "group": "通胀"
+    },
+    {
+      "id": "CPILFESL",
+      "sheet": "核心CPI_季调",
+      "label": "核心消费者价格指数（季调）",
+      "group": "通胀"
+    },
+    {
+      "id": "CPILFENS",
+      "sheet": "核心CPI_未季调",
+      "label": "核心消费者价格指数（未季调）",
+      "group": "通胀"
+    },
+    {
+      "id": "PCEPI",
+      "sheet": "PCE价格",
+      "label": "个人消费支出价格指数",
+      "group": "通胀"
+    },
+    {
+      "id": "PCEPILFE",
+      "sheet": "核心PCE价格",
+      "label": "核心个人消费支出价格指数",
+      "group": "通胀"
+    },
+    {
+      "id": "PPIACO",
+      "sheet": "PPI商品",
+      "label": "生产者价格指数：所有商品",
+      "group": "通胀"
+    },
+    {
+      "id": "PAYEMS",
+      "sheet": "非农就业总人数",
+      "label": "非农就业总人数",
+      "group": "就业"
+    },
+    {
+      "id": "UNRATE",
+      "sheet": "失业率",
+      "label": "失业率 U-3",
+      "group": "就业"
+    },
+    {
+      "id": "EMRATIO",
+      "sheet": "就业人口比率",
+      "label": "就业人口比率（16岁及以上）",
+      "group": "就业"
+    },
+    {
+      "id": "CIVPART",
+      "sheet": "劳动参与率",
+      "label": "劳动参与率（16岁及以上）",
+      "group": "就业"
+    },
+    {
+      "id": "ICSA",
+      "sheet": "初请失业金",
+      "label": "初次申请失业救济人数",
+      "group": "就业"
+    },
+    {
+      "id": "CCSA",
+      "sheet": "续请失业金",
+      "label": "持续申请失业救济人数",
+      "group": "就业"
+    },
+    {
+      "id": "CES0500000003",
+      "sheet": "平均时薪",
+      "label": "私人非农就业平均时薪",
+      "group": "就业"
+    },
+    {
+      "id": "JTSJOL",
+      "sheet": "职位空缺",
+      "label": "JOLTS 职位空缺",
+      "group": "就业"
+    },
+    {
+      "id": "GDPC1",
+      "sheet": "实际GDP",
+      "label": "实际国内生产总值",
+      "group": "经济活动"
+    },
+    {
+      "id": "GDP",
+      "sheet": "名义GDP",
+      "label": "名义国内生产总值",
+      "group": "经济活动"
+    },
+    {
+      "id": "A191RL1Q225SBEA",
+      "sheet": "实际GDP增速",
+      "label": "实际 GDP 季度增长率（年化）",
+      "group": "经济活动"
+    },
+    {
+      "id": "INDPRO",
+      "sheet": "工业生产",
+      "label": "工业生产指数",
+      "group": "经济活动"
+    },
+    {
+      "id": "RSAFS",
+      "sheet": "零售销售",
+      "label": "零售及餐饮销售额",
+      "group": "经济活动"
+    },
+    {
+      "id": "HOUST",
+      "sheet": "新屋开工",
+      "label": "新屋开工数量",
+      "group": "经济活动"
+    },
+    {
+      "id": "PERMIT",
+      "sheet": "建筑许可",
+      "label": "新住宅建筑许可数量",
+      "group": "经济活动"
+    },
+    {
+      "id": "DFF",
+      "sheet": "联邦基金利率",
+      "label": "有效联邦基金利率（日频）",
+      "group": "利率"
+    },
+    {
+      "id": "DGS3MO",
+      "sheet": "美债3月",
+      "label": "3 个月美债恒定期限收益率",
+      "group": "利率"
+    },
+    {
+      "id": "DGS2",
+      "sheet": "美债2年",
+      "label": "2 年美债恒定期限收益率",
+      "group": "利率"
+    },
+    {
+      "id": "DGS5",
+      "sheet": "美债5年",
+      "label": "5 年美债恒定期限收益率",
+      "group": "利率"
+    },
+    {
+      "id": "DGS10",
+      "sheet": "美债10年",
+      "label": "10 年美债恒定期限收益率",
+      "group": "利率"
+    },
+    {
+      "id": "DGS30",
+      "sheet": "美债30年",
+      "label": "30 年美债恒定期限收益率",
+      "group": "利率"
+    },
+    {
+      "id": "DFII10",
+      "sheet": "实际收益率10年",
+      "label": "10 年通胀保值国债实际收益率",
+      "group": "利率"
+    },
+    {
+      "id": "T10Y2Y",
+      "sheet": "期限利差10Y2Y",
+      "label": "10 年与 2 年国债收益率差",
+      "group": "利率"
+    },
+    {
+      "id": "T10Y3M",
+      "sheet": "期限利差10Y3M",
+      "label": "10 年与 3 个月国债收益率差",
+      "group": "利率"
+    },
+    {
+      "id": "NASDAQCOM",
+      "sheet": "纳斯达克综合",
+      "label": "纳斯达克综合指数",
+      "group": "市场"
+    },
+    {
+      "id": "NASDAQ100",
+      "sheet": "纳斯达克100",
+      "label": "纳斯达克 100 指数",
+      "group": "市场"
+    },
+    {
+      "id": "NASDAQSOX",
+      "sheet": "费城半导体",
+      "label": "PHLX 半导体指数（SOX）",
+      "group": "市场"
+    },
+    {
+      "id": "SP500",
+      "rolling_archive": true,
+      "sheet": "标普500",
+      "label": "标普 500 指数",
+      "group": "市场"
+    },
+    {
+      "id": "VIXCLS",
+      "sheet": "VIX",
+      "label": "CBOE VIX 波动率指数",
+      "group": "市场"
+    },
+    {
+      "id": "DTWEXBGS",
+      "sheet": "广义美元指数",
+      "label": "贸易加权广义美元指数",
+      "group": "市场"
+    },
+    {
+      "id": "DEXCHUS",
+      "sheet": "美元人民币",
+      "label": "人民币兑一美元即期汇率",
+      "group": "市场"
+    },
+    {
+      "id": "DCOILWTICO",
+      "sheet": "WTI原油",
+      "label": "WTI 原油库欣现货价格",
+      "group": "市场"
+    },
+    {
+      "id": "DCOILBRENTEU",
+      "sheet": "布伦特原油",
+      "label": "欧洲布伦特原油现货价格",
+      "group": "市场"
+    },
+    {
+      "id": "M2SL",
+      "sheet": "M2货币供应",
+      "label": "M2 货币供应量",
+      "group": "货币与信用"
+    },
+    {
+      "id": "WALCL",
+      "sheet": "美联储总资产",
+      "label": "美联储总资产",
+      "group": "货币与信用"
+    },
+    {
+      "id": "BAMLC0A0CM",
+      "rolling_archive": true,
+      "sheet": "投资级信用利差",
+      "label": "ICE BofA 美国企业债期权调整利差",
+      "group": "货币与信用"
+    },
+    {
+      "id": "BAMLH0A0HYM2",
+      "rolling_archive": true,
+      "sheet": "高收益信用利差",
+      "label": "ICE BofA 美国高收益债期权调整利差",
+      "group": "货币与信用"
+    }
+  ],
+  "derived": [
+    {
+      "id": "CPI_YOY",
+      "sheet": "CPI同比",
+      "label": "CPI 同比（未季调指数计算）",
+      "group": "通胀",
+      "input": "CPIAUCNS",
+      "method": "yoy"
+    },
+    {
+      "id": "CORE_CPI_YOY",
+      "sheet": "核心CPI同比",
+      "label": "核心 CPI 同比（未季调指数计算）",
+      "group": "通胀",
+      "input": "CPILFENS",
+      "method": "yoy"
+    },
+    {
+      "id": "PCE_YOY",
+      "sheet": "PCE同比",
+      "label": "PCE 价格同比",
+      "group": "通胀",
+      "input": "PCEPI",
+      "method": "yoy"
+    },
+    {
+      "id": "CORE_PCE_YOY",
+      "sheet": "核心PCE同比",
+      "label": "核心 PCE 价格同比",
+      "group": "通胀",
+      "input": "PCEPILFE",
+      "method": "yoy"
+    },
+    {
+      "id": "PAYEMS_CHANGE",
+      "sheet": "非农月度新增",
+      "label": "非农就业月度净增人数",
+      "group": "就业",
+      "input": "PAYEMS",
+      "method": "diff"
+    }
+  ]
+}
