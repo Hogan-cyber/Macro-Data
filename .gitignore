@@ -1,7 +1,8 @@
 node_modules/
 dist/
 .data-app-offline/
-.openai/
+.openai/*
+!.openai/hosting.json
 __pycache__/
 *.pyc
 *.lock
