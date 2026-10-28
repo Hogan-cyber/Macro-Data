@@ -4,7 +4,7 @@
 
 [下载最新 Excel](https://hogan-cyber.github.io/Macro-Data/data/us_macro.xlsx) · [下载 CSV](https://hogan-cyber.github.io/Macro-Data/data/observations.csv) · [查看自动更新](https://github.com/Hogan-cyber/Macro-Data/actions/workflows/weekly.yml)
 
-49 个美国宏观及市场指标，每项保留原始频率和单位。Dashboard 沿用香港房地产项目的分页、Reference period、来源查看和数据下载方式。每周一香港时间 **08:00**（UTC 周一 00:00）由 GitHub Actions 抓取、校验、更新 Excel/CSV、保存修订历史并发布网站。电脑关机不影响云端任务。
+49 个美国宏观及市场指标，每项保留原始频率和单位。。每周一香港时间 **08:00**（UTC 周一 00:00）由 GitHub Actions 抓取、校验、更新 Excel/CSV、保存修订历史并发布网站。
 
 GitHub 定时任务可能排队延迟；08:00 是计划触发时间，不是完成时间承诺。失败状态见 Actions；部分来源失败时保留上一有效值，并在页面和日志标记。公开仓库长期没有活动时可能暂停计划任务，本流程正常刷新会提交更新记录。参见 [GitHub 官方 schedule 说明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。
 
