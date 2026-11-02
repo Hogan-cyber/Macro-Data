@@ -1,0 +1,12 @@
+{
+  "unit": "Index Feb 5, 1971=100",
+  "frequency": "Daily, Close",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "NASDAQ Composite (NASDAQCOM)",
+  "source_last_updated": "Oct 29, 2026 10:38 PM CDT",
+  "usage_note": "Third-party copyright: review source terms",
+  "source_url": "https://fred.stlouisfed.org/series/NASDAQCOM",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM&cosd=1999-01-01&coed=2026-11-02",
+  "retrieved_at_utc": "2026-11-02T02:52:39Z",
+  "sha256": "acdd57090a60dcb42134eec6a5f8f398e432e1d76bbf629f9decadc9209127c5"
+}

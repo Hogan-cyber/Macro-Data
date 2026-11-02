@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity (T10Y3M)",
+  "source_last_updated": "Oct 30, 2026 4:03 PM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/T10Y3M",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y3M&cosd=1999-01-01&coed=2026-11-02",
+  "retrieved_at_utc": "2026-11-02T02:52:38Z",
+  "sha256": "f42f5f7a2cfba4ddbfa714cbdef7a403545315aa6cd14d66ba642190b286617c"
+}

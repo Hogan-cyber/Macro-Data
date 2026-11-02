@@ -1,0 +1,12 @@
+{
+  "unit": "Index 2017=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Personal Consumption Expenditures: Chain-type Price Index (PCEPI)",
+  "source_last_updated": "Oct 29, 2026 7:43 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/PCEPI",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPI&cosd=1999-01-01&coed=2026-11-02",
+  "retrieved_at_utc": "2026-11-02T02:52:27Z",
+  "sha256": "bf06ca5d7d06e5d9c01ec58c1c2c590184cb90873504132db7746dabbcb948a8"
+}

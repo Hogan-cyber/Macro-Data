@@ -1,0 +1,12 @@
+{
+  "unit": "Number",
+  "frequency": "Weekly, Ending Saturday",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Initial Claims (ICSA)",
+  "source_last_updated": "Oct 29, 2026 7:34 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/ICSA",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=ICSA&cosd=1999-01-01&coed=2026-11-02",
+  "retrieved_at_utc": "2026-11-02T02:52:29Z",
+  "sha256": "a1f71ecbbec267bf72f380caa7e500f8f60321b3776d16031724648846acdb7b"
+}
