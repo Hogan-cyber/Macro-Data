@@ -1,0 +1,15 @@
+{
+  "unit": "Index 2015=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Financial Market: Share Prices for United Kingdom (SPASTT01GBM661N)",
+  "source_last_updated": "Oct 15, 2026 3:40 PM CDT",
+  "usage_note": "OECD citation required; retain source attribution. Monthly observations are period labels, not publication timestamps. No daily benchmark identity is implied.",
+  "source_url": "https://fred.stlouisfed.org/series/SPASTT01GBM661N",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SPASTT01GBM661N&cosd=2000-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T06:12:41Z",
+  "sha256": "c96dec191d302a9cc06ab59f1d81ddb762f7a16777beb30303545a56390dcbff",
+  "provider": "FRED",
+  "original_provider": "OECD",
+  "definition": "OECD Financial Market: Share Prices, normalized monthly index (2015=100). This is the OECD country share-price series, not a daily named FTSE/DAX/CAC/TSX/ASX/KOSPI/Nifty/CSI benchmark or total-return index."
+}

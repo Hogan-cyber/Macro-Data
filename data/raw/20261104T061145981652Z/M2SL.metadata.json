@@ -1,0 +1,12 @@
+{
+  "unit": "Billions of Dollars",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "M2 (M2SL)",
+  "source_last_updated": "Oct 27, 2026 12:01 PM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/M2SL",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=M2SL&cosd=1999-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T06:12:05Z",
+  "sha256": "49e5021e5b2ccd162f660224e889320af22b1fdacab4d5c67baf6599ee94e6f1"
+}

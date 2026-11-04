@@ -1,0 +1,12 @@
+{
+  "unit": "Thousands of Units",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted Annual Rate",
+  "source_title": "New Privately-Owned Housing Units Authorized in Permit-Issuing Places: Total Units (PERMIT)",
+  "source_last_updated": "Oct 27, 2026 9:04 AM CDT",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/PERMIT",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PERMIT&cosd=1999-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T06:11:54Z",
+  "sha256": "6338ab761593299ef712f49492222524e585852d72ae6c54973281b4e9ace78e"
+}

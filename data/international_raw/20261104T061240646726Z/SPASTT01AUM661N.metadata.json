@@ -1,0 +1,15 @@
+{
+  "unit": "Index 2015=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Financial Market: Share Prices for Australia (SPASTT01AUM661N)",
+  "source_last_updated": "Oct 15, 2026 3:39 PM CDT",
+  "usage_note": "OECD citation required; retain source attribution. Monthly observations are period labels, not publication timestamps. No daily benchmark identity is implied.",
+  "source_url": "https://fred.stlouisfed.org/series/SPASTT01AUM661N",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SPASTT01AUM661N&cosd=2000-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T06:12:42Z",
+  "sha256": "627cdc73d4be67555fe4d0869b226428d410d06c91c8f2f5f0d2b6ffa1b6b4a8",
+  "provider": "FRED",
+  "original_provider": "OECD",
+  "definition": "OECD Financial Market: Share Prices, normalized monthly index (2015=100). This is the OECD country share-price series, not a daily named FTSE/DAX/CAC/TSX/ASX/KOSPI/Nifty/CSI benchmark or total-return index."
+}

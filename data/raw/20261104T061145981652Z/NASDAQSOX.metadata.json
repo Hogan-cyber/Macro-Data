@@ -1,0 +1,12 @@
+{
+  "unit": "Index",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "PHLX Semiconductor (NASDAQSOX)",
+  "source_last_updated": "Nov 3, 2026 10:44 PM CST",
+  "usage_note": "Third-party copyright: review source terms",
+  "source_url": "https://fred.stlouisfed.org/series/NASDAQSOX",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQSOX&cosd=1999-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T06:12:03Z",
+  "sha256": "d323e91d788ee5fbbf4d8b985359484ce9d2535a4b31e24652ad44f8f20d7958"
+}

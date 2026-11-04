@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_version": "3f2f4a41bc5cf9028b04",
-  "generated_at_utc": "2026-11-04T05:44:04Z",
+  "dataset_version": "cf6af61b855b2aea5867",
+  "generated_at_utc": "2026-11-04T06:12:51Z",
   "countries": [
     "AU",
     "CA",
@@ -13,11 +13,13 @@
     "IN",
     "JP",
     "KR",
+    "SG",
+    "TW",
     "US"
   ],
-  "series_count": 88,
-  "observation_count": 137788,
-  "valid_observation_count": 132701,
+  "series_count": 105,
+  "observation_count": 245929,
+  "valid_observation_count": 240117,
   "status": "SUCCESS",
   "failures": [],
   "limitations": [
@@ -26,52 +28,53 @@
     "Raw frequencies and units are retained. No interpolation, winsorization, forward-fill or automatic frequency conversion.",
     "OECD monthly share-price indices are normalized broad-market series, not daily FTSE/DAX/etc. index closes.",
     "Source retrieval time records this system acquisition, not the historical first public release.",
+    "Daily index closes use market-local dates; current local sessions are excluded. No exchange-calendar forward-fill. DAX is gross total return; see return_type before comparing.",
     "Country coverage and history differ. See dictionary and coverage.csv before joining features."
   ],
   "files": {
     "README.txt": {
-      "sha256": "985bd9a7e8ba46fb22ba81ea6630a851a4641860de3f1e788d49a55c282a57bf",
-      "bytes": 815
+      "sha256": "465c9b66f86384d6fe1c0cdddb3a8f62acae0f4b7112d0008216706705f96c06",
+      "bytes": 991
     },
     "coverage.csv": {
-      "sha256": "3bb9ee4b9ce535e03df6d04cc70f96989cb8d65d81eb261e43641aa023a18027",
-      "bytes": 9131
+      "sha256": "909890acebfc34dd24f5df9ae10eba5ab089c5f587136fef8fea41b304776e88",
+      "bytes": 10693
     },
     "dataset.sql.gz": {
-      "sha256": "7096a40e1ab2d0f05b30c59bcd0271d12b42b8c5ff05ef2d2c3f0e9f2509ab82",
-      "bytes": 767374
+      "sha256": "5e7f16fc0088f99cb64bcdd04ff993e6174d913dd1c20046421b3f2c2aca35b5",
+      "bytes": 1581102
     },
     "dataset.sqlite": {
-      "sha256": "89b42dc8b641e713a8d72c45f0ca1055be2e78bd76f1a697e252c473c51dcf00",
-      "bytes": 23060480
+      "sha256": "588cb445c3791bddf2996c0854d1c364ff5e82db8fd9e50430a733b9413ae019",
+      "bytes": 41385984
     },
     "dictionary.csv": {
-      "sha256": "ade0ef68623c8da05f7da19f0cfeaceb4675485cf0864a9bf1437e0b8ca1c433",
-      "bytes": 57328
+      "sha256": "35595045bb99f298bc06e469aab3928c07cc251b466de7d0dfdccfc331d60565",
+      "bytes": 71350
     },
     "dictionary.json": {
-      "sha256": "4634b225d2ccc2f78fc0ff872606a1ca73a4dfc8a94cee5ea69670a6202fd802",
-      "bytes": 98238
+      "sha256": "c0754db4cb2cc48355c6764a49165567ac6ef774630453833565f0bb763b58ee",
+      "bytes": 132053
     },
     "global_macro.xlsx": {
-      "sha256": "10b9caa22ed712a80c19f4585ef8c709e8f9f414427699e6cd3309c8c80641e0",
-      "bytes": 2561234
+      "sha256": "afa14cff7770d2b4f9400c436c6d29104a29bb256b8fae644e3f59d1ccd675e2",
+      "bytes": 4685534
     },
     "observations.csv.gz": {
-      "sha256": "74dcd5939ace9234d030d2694b266da222366f12dacca99f6490f9b39fc08c24",
-      "bytes": 731455
+      "sha256": "f1c454480120b841a899f62dd98ccdcf6f82d962d03de1e359f5fc813cdd5418",
+      "bytes": 1506918
     },
     "observations.jsonl.gz": {
-      "sha256": "b5dd0ecb7461feb95ce07cf4ce8b33bfc462badca0dadd647af208f48a64c8af",
-      "bytes": 844127
+      "sha256": "77c0dbc8ed417d7b3fd48f160d29b2241050f0a62fafc1180bfe89425ab57739",
+      "bytes": 1720419
     },
     "observations.parquet": {
-      "sha256": "025f7726221e9b74d504df48efb4e2b78c5f4c4650f3ca28b0e197f3354610be",
-      "bytes": 788884
+      "sha256": "d4ae89b17c398700fb82e8009e62c08564b5077e51145cf5553b6bbc424b36dd",
+      "bytes": 1733016
     },
     "bundle.zip": {
-      "sha256": "15c205bc3a2c4dcb5fffa0781e6d8bc46a0c27b30389b6350b682241a3fcd7d2",
-      "bytes": 7995279
+      "sha256": "4ba301b6bcb5435b6fc7aa006971bb69ac0c3c7f6a01e0b34c9dfb322bf065f1",
+      "bytes": 15340010
     }
   }
 }

@@ -87,3 +87,20 @@ WB_CN_UNEMPLOYMENT,CN,中国失业率（ILO 年度模型估计）,macro,Annual,2
 WB_HK_GDP_GROWTH,HK,中国香港实际 GDP 增长（年度）,macro,Annual,2000-01-01,2025-01-01,26,0,UPDATED
 WB_HK_CPI_INFLATION,HK,中国香港消费价格通胀（年度）,macro,Annual,2000-01-01,2025-01-01,26,0,UPDATED
 WB_HK_UNEMPLOYMENT,HK,中国香港失业率（ILO 年度模型估计）,macro,Annual,2000-01-01,2025-01-01,26,0,UPDATED
+HSI,HK,Hang Seng Index,equity_index,"Daily, Close",2000-01-03,2026-11-03,6612,79,UPDATED
+NIKKEI225,JP,Nikkei 225,equity_index,"Daily, Close",2000-01-04,2026-11-02,6571,122,UPDATED
+DAX,DE,DAX gross total return,equity_index,"Daily, Close",2000-01-03,2026-11-03,6816,43,UPDATED
+FTSE100,GB,FTSE 100,equity_index,"Daily, Close",2000-01-04,2026-11-03,6780,50,UPDATED
+CAC40,FR,CAC 40,equity_index,"Daily, Close",2000-01-03,2026-11-03,6860,36,UPDATED
+TSX,CA,S&P/TSX Composite,equity_index,"Daily, Close",2000-01-04,2026-11-03,6741,45,UPDATED
+ASX200,AU,S&P/ASX 200,equity_index,"Daily, Close",2000-01-04,2026-11-03,6783,45,UPDATED
+KOSPI,KR,KOSPI Composite,equity_index,"Daily, Close",2000-01-04,2026-11-03,6607,100,UPDATED
+NIFTY50,IN,NIFTY 50,equity_index,"Daily, Close",2007-09-17,2026-11-03,4693,31,UPDATED
+STI,SG,Straits Times Index,equity_index,"Daily, Close",2000-01-03,2026-11-03,6720,76,UPDATED
+TAIEX,TW,Taiwan Capitalization Weighted Index,equity_index,"Daily, Close",2000-01-04,2026-11-03,6578,98,UPDATED
+DJIA,US,Dow Jones Industrial Average,equity_index,"Daily, Close",2000-01-03,2026-11-03,6750,0,UPDATED
+CSI300,CN,CSI 300,equity_index,"Daily, Close",2005-01-04,2026-11-03,5301,0,UPDATED
+CSI500,CN,CSI 500,equity_index,"Daily, Close",2005-01-04,2026-11-03,5301,0,UPDATED
+CSI1000,CN,CSI 1000,equity_index,"Daily, Close",2005-01-04,2026-11-03,5301,0,UPDATED
+SSE_COMPOSITE,CN,Shanghai Composite,equity_index,"Daily, Close",2000-01-04,2026-11-03,6501,0,UPDATED
+SZSE_COMPONENT,CN,Shenzhen Component,equity_index,"Daily, Close",2000-01-04,2026-11-03,6501,0,UPDATED

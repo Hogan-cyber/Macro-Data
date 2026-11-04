@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily, Close",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "ICE BofA US High Yield Index Option-Adjusted Spread (BAMLH0A0HYM2)",
+  "source_last_updated": "Nov 3, 2026 10:01 AM CST",
+  "usage_note": "Third-party copyright: review source terms",
+  "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAMLH0A0HYM2&cosd=1999-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T06:12:07Z",
+  "sha256": "1b6fa33c48b805f7405d7aafa9f3f6fd71d472f2b39f61077cf2ee2a589b124b"
+}
