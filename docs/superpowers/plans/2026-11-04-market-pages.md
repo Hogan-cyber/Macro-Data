@@ -13,7 +13,7 @@
 - [x] Present four dedicated market overviews and retain Global Dataset and all existing US detail tabs with their original route and component IDs.
 - [x] Distinguish observation periods, source updates and acquisition timestamps. Expose retained-source failures. Label DAX gross total return when compared with price indices.
 - [x] Update the English README with page coverage and frequency limitations. Run dashboard tests, protected-runtime verification, build and bounded rendered review of all four markets, filtering, country switching, empty ranges, downloads and a narrow viewport.
-- [ ] Review the final diff, publish, verify the cloud workflow and live pages, then report only verified outcomes.
+- [x] Review the final diff, publish, verify the cloud workflow and live pages, then report only verified outcomes.
 
 ## Review focus
 
@@ -33,3 +33,5 @@
 - Rendered checks: US overview and existing jobs route; mainland China cards and index comparison; Europe national switch to France with reload persistence and annual year labels; Hong Kong daily chart and empty annual cards for a 2026-only range. A downloaded Hong Kong CSV contained 206 rows, only HSI/HK, dated 2026-01-02 through 2026-11-03. Browser console had no errors.
 - Responsive check: repaired the existing date-controls overflow at 390px; page width stayed 390px and the authored filter grid measured 358px. Restored the normal viewport afterward.
 - Follow-up scope: the user clarified money-lending numbers as Hong Kong non-bank licensed money-lender statistics and requested official websites first. Official Companies Registry sources were provided in chat; no loan-rate collector or unreviewed new dataset was added.
+
+- Publication verified: source commit `e88821918c8fc898dfea3fa012decaa563b61c87`; GitHub Actions run `41789597699` completed successfully at 2026-11-04 07:06:32 UTC. All four market views were opened on the public Pages URL with no browser console errors. Global Excel and SQLite download endpoints were checked after deployment.
