@@ -1,4 +1,4 @@
-name: Weekly US macro refresh and dashboard
+name: Weekly global macro dataset and dashboard
 
 on:
   schedule:
@@ -46,6 +46,7 @@ jobs:
         run: |
           npm ci
           python -m pip install -r updater/requirements.txt -r ml/requirements.txt
+          python -m pip install . build pyarrow
           python -m unittest discover -s tests -p 'test_*.py'
           node --test tests/macro.test.mjs
       - name: Refresh sources and export
@@ -58,7 +59,15 @@ jobs:
           result=$?
           set -e
           if [ "$result" -ne 0 ] && [ "$result" -ne 2 ]; then exit "$result"; fi
+          set +e
+          python updater/international.py
+          international_result=$?
+          set -e
+          if [ "$international_result" -ne 0 ] && [ "$international_result" -ne 2 ]; then exit "$international_result"; fi
+          if [ "$international_result" -eq 2 ]; then result=2; fi
           python updater/export_data.py
+          python updater/export_global.py
+          python tests/verify_global_files.py
           echo "status=$result" >> "$GITHUB_OUTPUT"
       - name: Verify Python and R preparation
         run: |
@@ -68,22 +77,29 @@ jobs:
       - name: Build dashboard
         run: |
           npm run build
+          python -m build --wheel --outdir build_packages
           mkdir -p dist/data
+          mkdir -p dist/packages
           cp data/us_macro.xlsx data/observations.csv data/dictionary.csv data/dictionary.json data/revisions.csv data/refresh_log.csv data/refresh_status.json dist/data/
+          cp -R data/global dist/data/global
+          cp build_packages/*.whl dist/packages/
           touch dist/.nojekyll
       - name: Retain history and revised values
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/us_macro.xlsx data/latest_snapshot.json data/raw data/*.csv data/*.json src/data.json
+          git add data/international_raw data/global
           if ! git diff --cached --quiet; then
-            git commit -m 'Refresh US macro data and source vintages [skip ci]'
+            git commit -m 'Refresh global macro data, formats and source vintages [skip ci]'
             git push
           fi
       - uses: actions/upload-artifact@v4
         with:
           name: us-macro-excel-and-model-inputs
           path: |
+            data/global/
+            build_packages/
             data/us_macro.xlsx
             data/*.csv
             data/refresh_status.json

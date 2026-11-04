@@ -11,3 +11,7 @@ data/backups/
 data/data/
 ml/output/
 .DS_Store
+build/
+build_packages/
+*.egg-info/
+.venv/

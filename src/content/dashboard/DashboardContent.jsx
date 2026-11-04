@@ -2,7 +2,8 @@ import React,{useState,useMemo,useEffect} from 'react';
 import {DataComponent,DataTable,EvidenceChart,Filters,Section,SortableRegion,SortableItem,Dropdown,Button,useDashboardTabs,useDataApp} from '../../data-app-public.jsx';
 import {inPeriod,latest,indexed,yieldCurve,downloadCSV} from './macro.js';
 import './macro.css';
-const tabs=[{id:'overview',label:'Overview'},{id:'jobs',label:'Inflation & Jobs'},{id:'markets',label:'Rates & Markets'},{id:'growth',label:'Growth & Housing'},{id:'data',label:'Data & Updates'}];
+import {GlobalData} from './GlobalData.jsx';
+const tabs=[{id:'overview',label:'US Overview'},{id:'jobs',label:'Inflation & Jobs'},{id:'markets',label:'Rates & Markets'},{id:'growth',label:'Growth & Housing'},{id:'data',label:'US Data & Updates'},{id:'global',label:'Global Dataset'}];
 const names={CPI_YOY:'CPI',CORE_CPI_YOY:'Core CPI',PCE_YOY:'PCE',CORE_PCE_YOY:'Core PCE',PAYEMS_CHANGE:'Nonfarm payroll change',PAYEMS:'Nonfarm payrolls',UNRATE:'Unemployment',EMRATIO:'Employment / population',CIVPART:'Labor participation',NASDAQCOM:'Nasdaq Composite',NASDAQ100:'Nasdaq 100',NASDAQSOX:'Philadelphia Semiconductor',SP500:'S&P 500',DGS3MO:'3-month Treasury',DGS2:'2-year Treasury',DGS5:'5-year Treasury',DGS10:'10-year Treasury',DGS30:'30-year Treasury',DFII10:'10-year real yield',DFF:'Fed funds',T10Y2Y:'10Y − 2Y spread',T10Y3M:'10Y − 3M spread',ICSA:'Initial claims',CCSA:'Continuing claims',A191RL1Q225SBEA:'Real GDP growth',INDPRO:'Industrial production',RSAFS:'Retail sales',HOUST:'Housing starts',PERMIT:'Building permits',VIXCLS:'VIX',BAMLC0A0CM:'Investment grade',BAMLH0A0HYM2:'High yield'};
 const fmt=(x,n=2)=>x==null?'—':Number(x).toLocaleString('en-US',{maximumFractionDigits:n});
 const col=(field,label,renderCell)=>({field,label,...(renderCell?{renderCell}:{})});
@@ -28,7 +29,7 @@ export function DashboardContent(){
  useEffect(()=>{if(filters.date!==range)setFilter('date',range);},[activeTabId,range,filters.date]);
  const all=queries.observations.rows;const rows=useMemo(()=>inPeriod(all,range),[all,range]);
  const tab=tabs.find(t=>t.id===activeTabId)?.id||'overview';
- return <div className="macro-page"><Period rows={all} range={range} onChange={setRange} defaultRange={defaultRange}/>{tab==='overview'?<Overview rows={rows}/>:tab==='jobs'?<Jobs rows={rows}/>:tab==='markets'?<Markets rows={rows}/>:tab==='growth'?<Growth rows={rows}/>:<Dataset rows={rows}/>}</div>;
+ return <div className="macro-page"><Period rows={all} range={range} onChange={setRange} defaultRange={defaultRange}/>{tab==='overview'?<Overview rows={rows}/>:tab==='jobs'?<Jobs rows={rows}/>:tab==='markets'?<Markets rows={rows}/>:tab==='growth'?<Growth rows={rows}/>:tab==='global'?<GlobalData range={range}/>:<Dataset rows={rows}/>}</div>;
 }
 function Overview({rows}){
  const groups=[['inflation-overview','Inflation · year on year (%)',select(rows,'CPI_YOY','CORE_CPI_YOY','PCE_YOY','CORE_PCE_YOY'),'Exact same calendar month one year earlier.'],['payroll-overview','Nonfarm payrolls · monthly change (thousands)',select(rows,'PAYEMS_CHANGE'),'Seasonally adjusted. Negative values are retained.'],['equity-overview','US equities · common start = 100',indexed(rows,['NASDAQCOM','NASDAQSOX','SP500']),'First common date in the selected range = 100. Price returns exclude dividends.'],['rates-overview','Treasury yields (%)',select(rows,'DGS2','DGS10','DGS30'),'Daily constant-maturity Treasury yields.']];

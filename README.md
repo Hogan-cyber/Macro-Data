@@ -1,14 +1,67 @@
-# 美国宏观与市场数据 · US Macro Monitor
+# 全球宏观与市场数据 · Global Macro Monitor
 
 ## [打开 Dashboard →](https://hogan-cyber.github.io/Macro-Data/)
 
-[下载最新 Excel](https://hogan-cyber.github.io/Macro-Data/data/us_macro.xlsx) · [下载 CSV](https://hogan-cyber.github.io/Macro-Data/data/observations.csv) · [查看自动更新](https://github.com/Hogan-cyber/Macro-Data/actions/workflows/weekly.yml)
+[下载全球 Excel](https://hogan-cyber.github.io/Macro-Data/data/global/global_macro.xlsx) · [SQLite](https://hogan-cyber.github.io/Macro-Data/data/global/dataset.sqlite) · [完整 ZIP](https://hogan-cyber.github.io/Macro-Data/data/global/bundle.zip) · [Python package 指南](PACKAGE_GUIDE.md) · [查看自动更新](https://github.com/Hogan-cyber/Macro-Data/actions/workflows/weekly.yml)
 
-49 个美国宏观及市场指标，每项保留原始频率和单位。。每周一香港时间 **08:00**（UTC 周一 00:00）由 GitHub Actions 抓取、校验、更新 Excel/CSV、保存修订历史并发布网站。
+88 项指标序列、11 个经济体：原有 49 项美国数据，加上 39 项国际数据。每项保留原始频率和单位。每周一香港时间 **08:00**（UTC 周一 00:00）由 GitHub Actions 抓取、校验、导出数据、保存修订历史并发布网站。
+
+**运行完全独立于 AI、ChatGPT/Codex 和个人电脑。** 定时采集、清洗、校验、格式导出和 dashboard 发布均为确定性的 Python、R、Node.js 与 GitHub Actions 程序，不需要 LLM、AI key、聊天会话或手动上传。上游公开来源变化仍可能需要维护；实际故障会标记并保留已有有效数据，见 [独立运行说明](OPERATIONS.md)。
 
 GitHub 定时任务可能排队延迟；08:00 是计划触发时间，不是完成时间承诺。失败状态见 Actions；部分来源失败时保留上一有效值，并在页面和日志标记。公开仓库长期没有活动时可能暂停计划任务，本流程正常刷新会提交更新记录。参见 [GitHub 官方 schedule 说明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。
 
-## 数据包含什么
+## 全球数据下载与 Python package
+
+| 格式 | 下载 | 用途 |
+| --- | --- | --- |
+| Excel | [global_macro.xlsx](https://hogan-cyber.github.io/Macro-Data/data/global/global_macro.xlsx) | 每个指标一页，附目录、字典和说明 |
+| SQLite | [dataset.sqlite](https://hogan-cyber.github.io/Macro-Data/data/global/dataset.sqlite) | 无数据库服务器即可 SQL 查询 |
+| SQL dump | [dataset.sql.gz](https://hogan-cyber.github.io/Macro-Data/data/global/dataset.sql.gz) | 解压后导入 SQLite；不是通用 PostgreSQL/MySQL 语法 |
+| Parquet | [observations.parquet](https://hogan-cyber.github.io/Macro-Data/data/global/observations.parquet) | pandas / DuckDB 研究输入 |
+| CSV | [observations.csv.gz](https://hogan-cyber.github.io/Macro-Data/data/global/observations.csv.gz) | Python、R、Excel 等通用长表 |
+| JSON Lines | [observations.jsonl.gz](https://hogan-cyber.github.io/Macro-Data/data/global/observations.jsonl.gz) | 逐条读取 / 数据管道 |
+| 完整文件包 | [bundle.zip](https://hogan-cyber.github.io/Macro-Data/data/global/bundle.zip) | 包含离线 manifest；解压即可使用 SDK 离线模式 |
+| 字典与版本 | [dictionary.csv](https://hogan-cyber.github.io/Macro-Data/data/global/dictionary.csv) · [manifest.json](https://hogan-cyber.github.io/Macro-Data/data/global/manifest.json) | 单位、频率、来源、更新状态、版本与 SHA-256 |
+
+```sh
+python -m pip install "git+https://github.com/Hogan-cyber/Macro-Data.git"
+# 也可直接安装网站提供的 wheel，无须 Git：
+python -m pip install https://hogan-cyber.github.io/Macro-Data/packages/hogan_macro_data-0.1.0-py3-none-any.whl
+```
+
+```python
+from hogan_macro import MacroData
+
+data = MacroData()
+print(data.catalog(country=["US", "CN", "JP", "GB"]))
+us = data.load(series=["PAYEMS_CHANGE", "NASDAQSOX", "NASDAQCOM", "DGS10", "EMRATIO"], start="2020-01-01")
+global_data = data.load(country=["CN", "JP", "GB"], start="2000-01-01")
+counts = data.sql("SELECT country, COUNT(*) AS n FROM observations GROUP BY country")
+data.download("excel", "downloads/global_macro.xlsx")
+```
+
+未发布到 PyPI。包名是 `hogan-macro-data`，导入名是 `hogan_macro`；[完整调用、离线与复现指南](PACKAGE_GUIDE.md)。用 `ref` 固定真实 Git 提交可冻结研究输入；各格式按 manifest 校验，不会把网络失败静默伪装成最新数据。
+
+| 国际覆盖 | 股价指数 | GDP 增长、CPI 通胀、失业率 |
+| --- | --- | --- |
+| 日本、英国、德国、法国、加拿大、澳大利亚、韩国、印度、中国 | OECD 月度标准化股价指数 | World Bank 年度数据，各国 3 项 |
+| 香港 | 暂未加入 | World Bank 年度数据，3 项 |
+
+第一版国际历史从 2000 年开始，实际截止期见目录。月度股价指数不等于日频 FTSE/DAX/日经等具名基准收盘价；年度 CPI 通胀不是月度 CPI 指数，失业率为 ILO modeled estimate。日经 225 的来源要求再分发许可，未纳入公开文件。各国覆盖不完全相同。
+
+R 读取全球长表（原有美国 R 训练前处理仍在下文）：
+
+```r
+url <- "https://hogan-cyber.github.io/Macro-Data/data/global/observations.csv.gz"
+local_file <- tempfile(fileext = ".csv.gz")
+download.file(url, local_file, mode = "wb", quiet = TRUE)
+con <- gzfile(local_file, "rt")
+global_data <- read.csv(con, na.strings = "", stringsAsFactors = FALSE)
+close(con)
+cn <- subset(global_data, country == "CN")
+```
+
+## 美国数据包含什么
 
 - 通胀：CPI、核心 CPI、PCE、核心 PCE、PPI；同比率按相同日历月份计算。
 - 就业：非农总人数、非农月度新增、失业率、就业人口比率、劳动参与率、初请/续请失业金、平均时薪、职位空缺。
@@ -100,12 +153,17 @@ prepare_training(weekly, target='NASDAQSOX', horizon=4L)
 
 ```sh
 python -m pip install -r updater/requirements.txt -r ml/requirements.txt
+python -m pip install . build
+python updater/bootstrap.py
 python updater/update_us_macro.py
+python updater/international.py
 python updater/export_data.py
+python updater/export_global.py
+python tests/verify_global_files.py
 npm ci
 npm run build
 ```
 
-Node.js 24 用于构建。修改内容后推送 `main` 会运行工作流；也可以在 Actions → Weekly US macro refresh and dashboard → Run workflow 手动刷新。初次发布需 [Settings → Pages](https://github.com/Hogan-cyber/Macro-Data/settings/pages) 的 Source 设置为 GitHub Actions。无需把 API key 或个人 token 写入代码。
+Node.js 24 用于构建。修改内容后推送 `main` 会运行工作流；也可以在 Actions → Weekly global macro dataset and dashboard → Run workflow 手动刷新。初次发布需 [Settings → Pages](https://github.com/Hogan-cyber/Macro-Data/settings/pages) 的 Source 设置为 GitHub Actions。无需把 API key 或个人 token 写入代码。
 
-数据由 [FRED](https://fred.stlouisfed.org/) 官方公开 CSV 和元数据页面获取，原始提供者包括 BLS、BEA、Federal Reserve、Treasury、Nasdaq、S&P、ICE 等。部分市场数据受原始提供者使用条款限制，本仓库不授予这些数据的再许可。各指标的来源链接见数据字典。
+数据由 [FRED](https://fred.stlouisfed.org/) 官方公开 CSV 和元数据页面，以及 [World Bank API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation) 获取，原始提供者包括 BLS、BEA、Federal Reserve、Treasury、Nasdaq、S&P、ICE、OECD 等。部分市场数据受原始提供者使用条款限制，本仓库不授予这些数据的再许可。各指标的来源链接见数据字典。
