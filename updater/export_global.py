@@ -9,17 +9,18 @@ from openpyxl.styles import Font,PatternFill,Alignment
 
 ROOT=Path(__file__).resolve().parents[1]
 OBS=['series_id','country','date','value','is_missing','frequency','unit','seasonal_adjustment','retrieved_at_utc','release_date','update_status']
-META=['series_id','country','country_name','indicator_zh','asset_class','category','frequency','unit','seasonal_adjustment','source_title','source_url','download_url','first_observation','last_observation','valid_rows','missing_rows','retrieved_at_utc','source_last_updated','update_status','definition','usage_note']
+META=['series_id','country','country_name','indicator_zh','asset_class','category','frequency','unit','seasonal_adjustment','source_title','source_url','download_url','first_observation','last_observation','valid_rows','missing_rows','retrieved_at_utc','source_last_updated','update_status','definition','usage_note','provider','source_symbol','market_timezone','currency','return_type']
 LIMITS=['Latest-revised observations, not complete historical point-in-time data.',
  'date identifies the observation period, NOT the publication date. release_date is NULL when unverified.',
  'Raw frequencies and units are retained. No interpolation, winsorization, forward-fill or automatic frequency conversion.',
  'OECD monthly share-price indices are normalized broad-market series, not daily FTSE/DAX/etc. index closes.',
  'Source retrieval time records this system acquisition, not the historical first public release.',
+ 'Daily index closes use market-local dates; current local sessions are excluded. No exchange-calendar forward-fill. DAX is gross total return; see return_type before comparing.',
  'Country coverage and history differ. See dictionary and coverage.csv before joining features.']
 
-def prepare(us,international):
+def prepare(us,international,daily=None):
     metadata=[];records=[];seen=set()
-    for entry in us['entries']+international['entries']:
+    for entry in us['entries']+international['entries']+(daily or {}).get('entries',[]):
         spec=entry['spec'];m=entry['meta'];sid=spec['id']
         if sid in seen:raise ValueError('Duplicate series ID: '+sid)
         seen.add(sid)
@@ -29,6 +30,8 @@ def prepare(us,international):
         meta.update(series_id=sid,country=country,country_name=spec.get('country_name',m.get('country_name','United States')),
                     asset_class=spec.get('asset_class',m.get('asset_class','equity_index' if equity else 'macro')),
                     indicator_zh=spec.get('label',m.get('indicator_zh',sid)),category=spec.get('group',m.get('category','macro')))
+        if equity:
+            meta.update(return_type='price',provider='FRED')
         days=set();last=None;valid=[]
         for day,value,missing in entry['rows']:
             date.fromisoformat(day)
@@ -85,9 +88,10 @@ def write_excel(path,obs,meta):
 def export(root=ROOT):
     data=root/'data';dest=data/'global';dest.mkdir(exist_ok=True)
     us=json.loads((data/'latest_snapshot.json').read_text());international=json.loads((data/'international_snapshot.json').read_text())
-    obs,meta=prepare(us,international)
+    daily=json.loads((data/'daily_snapshot.json').read_text())
+    obs,meta=prepare(us,international,daily)
     generated=datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00','Z')
-    version=hashlib.sha256((us['run_id']+'|'+international['run_id']).encode()).hexdigest()[:20]
+    version=hashlib.sha256((us['run_id']+'|'+international['run_id']+'|'+daily['run_id']).encode()).hexdigest()[:20]
     with tempfile.TemporaryDirectory(prefix='global-export-',dir=data) as scratch:
         out=Path(scratch)
         obs.to_csv(out/'observations.csv.gz',index=False,compression={'method':'gzip','mtime':0})
@@ -102,10 +106,10 @@ def export(root=ROOT):
         meta.to_sql('series',connection,if_exists='append',index=False);obs.to_sql('observations',connection,if_exists='append',index=False,chunksize=5000)
         connection.execute('CREATE INDEX observations_country_date ON observations(country,date)')
         # Rows are detected revisions, never claimed to be original publication vintages.
-        rev=[dict(zip(us['revision_headers'],r)) for r in us['revisions']]+international.get('revisions',[])
+        rev=[dict(zip(us['revision_headers'],r)) for r in us['revisions']]+international.get('revisions',[])+daily.get('revisions',[])
         fields=['run_id','detected_at_utc','series_id','observation_date','old_value','new_value','change_type']
         pd.DataFrame(rev,columns=fields).to_sql('revisions',connection,index=False)
-        pd.DataFrame([{'dataset_version':version,'generated_at_utc':generated,'us_run_id':us['run_id'],'international_run_id':international['run_id'],'history_type':'latest_revised'}]).to_sql('dataset_info',connection,index=False)
+        pd.DataFrame([{'dataset_version':version,'generated_at_utc':generated,'us_run_id':us['run_id'],'international_run_id':international['run_id'],'daily_run_id':daily['run_id'],'history_type':'latest_revised'}]).to_sql('dataset_info',connection,index=False)
         connection.commit()
         assert connection.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
         assert not connection.execute('PRAGMA foreign_key_check').fetchall()
@@ -119,8 +123,8 @@ def export(root=ROOT):
         check=pd.read_parquet(out/'observations.parquet');pd.testing.assert_frame_equal(obs,check,check_dtype=False)
         manifest={'schema_version':1,'dataset_version':version,'generated_at_utc':generated,
           'countries':sorted(meta.country.unique().tolist()),'series_count':len(meta),'observation_count':len(obs),
-          'valid_observation_count':int(obs.value.notna().sum()),'status':'PARTIAL' if us['failures'] or international['failures'] else 'SUCCESS',
-          'failures':us['failures']+international['failures'],'limitations':LIMITS,
+          'valid_observation_count':int(obs.value.notna().sum()),'status':'PARTIAL' if us['failures'] or international['failures'] or daily['failures'] else 'SUCCESS',
+          'failures':us['failures']+international['failures']+daily['failures'],'limitations':LIMITS,
           'files':{p.name:{'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in sorted(out.iterdir())}}
         # The archive contains a manifest for its contents, so extraction is a
         # complete offline SDK dataset. Its manifest excludes the archive itself.
@@ -143,7 +147,7 @@ def export(root=ROOT):
             definition['queryIds']=['observations','globalObservations']
             definition['defaultValue']=definition['defaultValue'].split('..')[0]+'..'+obs.date.max()
     slim=obs[['series_id','country','date','value','is_missing']].astype(object).where(pd.notna(obs),None).to_dict('records')
-    app['queries']['globalObservations']={'rows':slim,'source':{'label':'FRED / OECD and World Bank official data','executedAt':generated,'caveats':LIMITS,'evidenceFlow':[{'title':'Reproduce','detail':'python updater/international.py; python updater/export_data.py; python updater/export_global.py. Exact URLs, units, frequencies and acquisition timestamps are in dictionary.csv.'}]}}
+    app['queries']['globalObservations']={'rows':slim,'source':{'label':'FRED / OECD, World Bank, Yahoo Finance and Eastmoney','executedAt':generated,'caveats':LIMITS,'evidenceFlow':[{'title':'Reproduce','detail':'python updater/international.py; python updater/daily_indices.py; python updater/export_data.py; python updater/export_global.py. Exact URLs, units, frequencies and acquisition timestamps are in dictionary.csv.'}]}}
     app['queries']['globalDictionary']={'rows':meta.astype(object).where(pd.notna(meta),None).to_dict('records'),'source':{'label':'Global series catalog','executedAt':generated}}
     path.write_text(json.dumps(app,ensure_ascii=False,allow_nan=False,separators=(',',':')))
     print(json.dumps({k:v for k,v in manifest.items() if k not in ['files','limitations','failures']},ensure_ascii=False))

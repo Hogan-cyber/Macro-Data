@@ -82,6 +82,13 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(len(self.client.catalog(search="consumer")), 2)
         self.assertEqual(len(self.client.catalog(search=".*")), 0)
 
+    def test_frequency_filter_applies_to_sql_rows(self):
+        self.assertEqual(self.client.catalog(frequency='daily').series_id.tolist(),['US_EQ'])
+        self.assertEqual(set(self.client.load(frequency='daily').series_id),{'US_EQ'})
+        self.assertEqual(self.client.load(frequency='daily',wide=True).columns.tolist(),['US_EQ'])
+        self.assertTrue(self.client.load(country='CN',frequency='daily').empty)
+        with self.assertRaises(ValueError):self.client.catalog(frequency='typo')
+
     def test_unknown_or_empty_selection_raises(self):
         for method, kwargs in [("catalog", {"country": "ZZ"}), ("load", {"country": ["CN", "ZZ"]}),
                                ("load", {"series": "TYPO"}), ("load", {"series": []}),

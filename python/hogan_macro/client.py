@@ -116,7 +116,7 @@ class MacroData:
     def _remote_stream(self, filename: str):
         request = urllib.request.Request(
             self._base_url + filename,
-            headers={"User-Agent": "hogan-macro-data/0.1.0", "Accept-Encoding": "identity"},
+            headers={"User-Agent": "hogan-macro-data/0.2.0", "Accept-Encoding": "identity"},
         )
         response = None
         for attempt in range(3):
@@ -275,14 +275,28 @@ class MacroData:
             raise ValueError(f"Unknown country code(s): {', '.join(unknown)}. Available: {', '.join(sorted(countries))}")
         return [countries[item.upper()] for item in values]
 
-    def catalog(self, country=None, asset_class=None, search: str | None = None) -> pd.DataFrame:
+    @staticmethod
+    def _frequency_mask(catalog, frequency):
+        if not isinstance(frequency, str) or not frequency.strip():
+            raise ValueError('frequency must be a non-empty string')
+        key=frequency.strip().casefold()
+        aliases={'daily':['Daily','Daily, Close'],'monthly':['Monthly'],'quarterly':['Quarterly'],'annual':['Annual']}
+        if key=='weekly':return catalog.frequency.str.startswith('Weekly',na=False)
+        accepted=aliases.get(key,[frequency])
+        if key not in aliases and not catalog.frequency.str.casefold().eq(key).any():
+            raise ValueError('Unknown frequency; inspect catalog().frequency')
+        return catalog.frequency.str.casefold().isin([x.casefold() for x in accepted])
+
+    def catalog(self, country=None, asset_class=None, search: str | None = None, frequency: str | None = None) -> pd.DataFrame:
         """Inspect series metadata; country codes and asset classes are case-insensitive.
 
         search is a literal, case-insensitive substring across text metadata.
         Unknown country codes raise ValueError rather than returning empty data.
         """
         catalog = self.sql("SELECT * FROM series ORDER BY country, series_id")
+        frequency_mask=self._frequency_mask(catalog,frequency) if frequency is not None else None
         countries = self._country_filter(catalog, country)
+        if frequency_mask is not None:catalog=catalog.loc[frequency_mask]
         if countries is not None:
             catalog = catalog.loc[catalog.country.isin(countries)]
         assets = _selection(asset_class, "asset_class")
@@ -295,7 +309,7 @@ class MacroData:
             catalog = catalog.loc[matched]
         return catalog.reset_index(drop=True)
 
-    def load(self, series=None, country=None, start=None, end=None, wide: bool = False, *, allow_mixed_frequencies: bool = False) -> pd.DataFrame:
+    def load(self, series=None, country=None, start=None, end=None, wide: bool = False, *, allow_mixed_frequencies: bool = False, frequency: str | None = None) -> pd.DataFrame:
         """Load native observations with inclusive observation-date bounds.
 
         No filling, aggregation, resampling, lagging, or release-date inference.
@@ -313,13 +327,17 @@ class MacroData:
             catalog = catalog.loc[catalog.series_id.isin(selected)]
         if countries is not None:
             catalog = catalog.loc[catalog.country.isin(countries)]
-        frequencies = catalog.frequency.dropna().unique()
+        if frequency is not None:
+            catalog=catalog.loc[self._frequency_mask(catalog,frequency)]
+            selected=catalog.series_id.tolist()
+        frequencies = catalog.frequency.replace({'Daily, Close':'Daily'}).dropna().unique()
         if wide and len(frequencies) > 1 and not allow_mixed_frequencies:
             raise ValueError(f"Mixed frequencies: {', '.join(map(str, frequencies))}. Select one frequency, or explicitly set allow_mixed_frequencies=True; no resampling is performed")
         lower, upper = _date_bound(start, "start"), _date_bound(end, "end")
         if lower is not None and upper is not None and lower > upper:
             raise ValueError("start must be on or before end")
         clauses, params = [], []
+        if selected==[]:clauses.append('1=0')
         for field, values in [("series_id", selected), ("country", countries)]:
             if values is not None:
                 clauses.append(f"{field} IN ({','.join('?' for _ in values)})")

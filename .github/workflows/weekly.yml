@@ -65,6 +65,12 @@ jobs:
           set -e
           if [ "$international_result" -ne 0 ] && [ "$international_result" -ne 2 ]; then exit "$international_result"; fi
           if [ "$international_result" -eq 2 ]; then result=2; fi
+          set +e
+          python updater/daily_indices.py
+          daily_result=$?
+          set -e
+          if [ "$daily_result" -ne 0 ] && [ "$daily_result" -ne 2 ]; then exit "$daily_result"; fi
+          if [ "$daily_result" -eq 2 ]; then result=2; fi
           python updater/export_data.py
           python updater/export_global.py
           python tests/verify_global_files.py
@@ -89,7 +95,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/us_macro.xlsx data/latest_snapshot.json data/raw data/*.csv data/*.json src/data.json
-          git add data/international_raw data/global
+          git add data/international_raw data/daily_raw data/global
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh global macro data, formats and source vintages [skip ci]'
             git push

@@ -627,12 +627,5 @@
       "definition": "Annual ILO modeled unemployment estimate; not a national monthly labor-force survey release.",
       "usage_note": "World Bank WDI, CC BY 4.0 with attribution. Annual observations are year labels (stored January 1), not dates of data availability. Latest revised data; no historical release timestamps."
     }
-  ],
-  "excluded_series": [
-    {
-      "id": "NIKKEI225",
-      "reason": "FRED source notes require Nikkei permission for third-party redistribution; excluded from this public dataset.",
-      "source_url": "https://fred.stlouisfed.org/series/NIKKEI225"
-    }
   ]
 }
