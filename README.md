@@ -12,6 +12,21 @@ GitHub may delay scheduled jobs: 08:00 is a trigger time, not a completion guara
 
 ## Downloads and Python access
 
+### Market pages
+
+The dashboard has dedicated **United States**, **Mainland China**, **Europe** and **Hong Kong** pages, plus the **Global Dataset** explorer for all 13 economies.
+
+| Page | Equity coverage | Macro coverage |
+| --- | --- | --- |
+| United States | S&P 500, Nasdaq Composite, Nasdaq 100 and Philadelphia Semiconductor | Overview and existing US inflation/jobs, rates/markets, growth/housing and data/update detail pages |
+| Mainland China | CSI 300, CSI 500, CSI 1000, Shanghai Composite and Shenzhen Component daily closes | World Bank annual GDP growth, CPI inflation and ILO modeled unemployment; separate OECD monthly share-price history |
+| Europe | Germany's DAX, France's CAC 40 and the UK's FTSE 100 daily closes | Select Germany, France or the UK for annual national macro indicators; separate OECD monthly share-price histories |
+| Hong Kong | Hang Seng Index daily closes | World Bank annual GDP growth, CPI inflation and ILO modeled unemployment |
+
+Europe is a view of three national markets, **not a euro-area aggregate**. DAX is gross total return; CAC 40 and FTSE 100 are price indices. International annual macro indicators are not equivalent to monthly national releases. Headline cards identify the observation period and native frequency; source coverage separately shows provider update and retrieval timestamps. An updated source check does not imply that a new reference month or year has been released.
+
+The reference-period filter applies to cards, charts and selected CSV downloads on every market page. Regional CSV downloads include all series in that region within the selected period; Excel and SQLite links contain the complete global dataset. Full-history source-coverage tables remain independent of the reference-period filter. Dataset IDs, Python API and the weekly cloud schedule are unchanged.
+
 | Format | Download | Use |
 | --- | --- | --- |
 | Excel | [global_macro.xlsx](https://hogan-cyber.github.io/Macro-Data/data/global/global_macro.xlsx) | One sheet per series, catalog, dictionary and notes |

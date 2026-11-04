@@ -1,9 +1,11 @@
 import React,{useState,useMemo,useEffect} from 'react';
 import {DataComponent,DataTable,EvidenceChart,Filters,Section,SortableRegion,SortableItem,Dropdown,Button,useDashboardTabs,useDataApp} from '../../data-app-public.jsx';
-import {inPeriod,latest,indexed,yieldCurve,downloadCSV} from './macro.js';
+import {inPeriod,indexed,yieldCurve,downloadCSV} from './macro.js';
 import './macro.css';
 import {GlobalData} from './GlobalData.jsx';
-const tabs=[{id:'overview',label:'US Overview'},{id:'jobs',label:'Inflation & Jobs'},{id:'markets',label:'Rates & Markets'},{id:'growth',label:'Growth & Housing'},{id:'data',label:'US Data & Updates'},{id:'global',label:'Global Dataset'}];
+import {RegionalMarket} from './RegionalMarket.jsx';
+import {observationPeriod,latestPair} from './regions.js';
+const tabs=[{id:'overview',label:'United States',previousLabels:['US Overview']},{id:'china',label:'Mainland China',focusFields:['economy','series']},{id:'europe',label:'Europe',focusFields:['economy','series']},{id:'hong-kong',label:'Hong Kong',focusFields:['economy','series']},{id:'jobs',label:'US Inflation & Jobs',previousLabels:['Inflation & Jobs']},{id:'markets',label:'US Rates & Markets',previousLabels:['Rates & Markets']},{id:'growth',label:'US Growth & Housing',previousLabels:['Growth & Housing']},{id:'data',label:'US Data & Updates'},{id:'global',label:'Global Dataset'}];
 const names={CPI_YOY:'CPI',CORE_CPI_YOY:'Core CPI',PCE_YOY:'PCE',CORE_PCE_YOY:'Core PCE',PAYEMS_CHANGE:'Nonfarm payroll change',PAYEMS:'Nonfarm payrolls',UNRATE:'Unemployment',EMRATIO:'Employment / population',CIVPART:'Labor participation',NASDAQCOM:'Nasdaq Composite',NASDAQ100:'Nasdaq 100',NASDAQSOX:'Philadelphia Semiconductor',SP500:'S&P 500',DGS3MO:'3-month Treasury',DGS2:'2-year Treasury',DGS5:'5-year Treasury',DGS10:'10-year Treasury',DGS30:'30-year Treasury',DFII10:'10-year real yield',DFF:'Fed funds',T10Y2Y:'10Y − 2Y spread',T10Y3M:'10Y − 3M spread',ICSA:'Initial claims',CCSA:'Continuing claims',A191RL1Q225SBEA:'Real GDP growth',INDPRO:'Industrial production',RSAFS:'Retail sales',HOUST:'Housing starts',PERMIT:'Building permits',VIXCLS:'VIX',BAMLC0A0CM:'Investment grade',BAMLH0A0HYM2:'High yield'};
 const fmt=(x,n=2)=>x==null?'—':Number(x).toLocaleString('en-US',{maximumFractionDigits:n});
 const col=(field,label,renderCell)=>({field,label,...(renderCell?{renderCell}:{})});
@@ -12,8 +14,8 @@ function Trend({id,title,rows,description,type='line',zero=false,height=320}){
  const shown=rows.map(r=>({...r,indicator:names[r.series_id]||r.series_id}));
  return <EvidenceChart id={id} queryId="observations" variant="card" title={title} rows={shown} sourceRows={rows} height={height} description={description} spec={{type,x:'date',y:'value',series:'indicator',stackable:false,startAtZero:zero,valueDecimals:2,showXAxisLabel:false,showYAxisLabel:false}}/>;
 }
-function Kpi({id,title,rows,unit,n=2}){const r=latest(rows);const prior=rows.filter(x=>x.value!=null&&x.date<r?.date).at(-1);const delta=r&&prior?r.value-prior.value:null;
- return <DataComponent id={id} queryId="observations" variant="card" kind="metric" title={title} sourceRows={[prior,r].filter(Boolean)} displayRows={r?[r]:[]}><div data-reviewed-rows><div className="macro-value">{fmt(r?.value,n)}<small>{unit}</small></div><div className="macro-caption">{r?.date||'No data in selected period'}</div><div className="macro-small">{delta==null?'No earlier comparison in range':`${delta>0?'+':''}${fmt(delta,n)} vs previous observation (${prior.date})`}</div></div></DataComponent>;
+function Kpi({id,title,rows,unit,n=2}){const{queries}=useDataApp();const{current:r,previous:prior,delta}=latestPair(rows);const frequency=queries.dictionary.rows.find(m=>m.series_id===r?.series_id)?.frequency;
+ return <DataComponent id={id} queryId="observations" variant="card" kind="metric" title={title} sourceRows={[prior,r].filter(Boolean)} displayRows={r?[r]:[]}><div data-reviewed-rows><div className="macro-value">{fmt(r?.value,n)}<small>{unit}</small></div><div className="macro-caption">{observationPeriod(r?.date,frequency)}</div><div className="macro-small">{delta==null?'No earlier comparison in range':`${delta>0?'+':''}${fmt(delta,n)} vs previous observation (${observationPeriod(prior.date,frequency).split(' · ')[0]})`}</div></div></DataComponent>;
 }
 function Period({rows,range,onChange,defaultRange}){
  const months=useMemo(()=>[...new Set(rows.map(r=>r.date.slice(0,7)))].sort(),[rows]);
@@ -27,9 +29,9 @@ export function DashboardContent(){
  const{snapshot,queries,filters,setFilter}=useDataApp();const{activeTabId}=useDashboardTabs(tabs);
  const defaultRange=snapshot.filters[0].defaultValue;const[range,setRange]=useState(filters.date||defaultRange);
  useEffect(()=>{if(filters.date!==range)setFilter('date',range);},[activeTabId,range,filters.date]);
- const all=queries.observations.rows;const rows=useMemo(()=>inPeriod(all,range),[all,range]);
+ const all=queries.observations.rows;const rows=useMemo(()=>inPeriod(all,range),[all,range]);const periodRows=queries.globalObservations?.rows||all;
  const tab=tabs.find(t=>t.id===activeTabId)?.id||'overview';
- return <div className="macro-page"><Period rows={all} range={range} onChange={setRange} defaultRange={defaultRange}/>{tab==='overview'?<Overview rows={rows}/>:tab==='jobs'?<Jobs rows={rows}/>:tab==='markets'?<Markets rows={rows}/>:tab==='growth'?<Growth rows={rows}/>:tab==='global'?<GlobalData range={range}/>:<Dataset rows={rows}/>}</div>;
+ return <div className="macro-page"><Period rows={periodRows} range={range} onChange={setRange} defaultRange={defaultRange}/>{tab==='overview'?<Overview rows={rows}/>:tab==='jobs'?<Jobs rows={rows}/>:tab==='markets'?<Markets rows={rows}/>:tab==='growth'?<Growth rows={rows}/>:tab==='data'?<Dataset rows={rows}/>:tab==='global'?<GlobalData range={range}/>:<RegionalMarket key={tab} market={tab} range={range}/>}</div>;
 }
 function Overview({rows}){
  const groups=[['inflation-overview','Inflation · year on year (%)',select(rows,'CPI_YOY','CORE_CPI_YOY','PCE_YOY','CORE_PCE_YOY'),'Exact same calendar month one year earlier.'],['payroll-overview','Nonfarm payrolls · monthly change (thousands)',select(rows,'PAYEMS_CHANGE'),'Seasonally adjusted. Negative values are retained.'],['equity-overview','US equities · common start = 100',indexed(rows,['NASDAQCOM','NASDAQSOX','SP500']),'First common date in the selected range = 100. Price returns exclude dividends.'],['rates-overview','Treasury yields (%)',select(rows,'DGS2','DGS10','DGS30'),'Daily constant-maturity Treasury yields.']];
