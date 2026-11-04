@@ -1,0 +1,15 @@
+{
+  "unit": "Index 2015=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Financial Market: Share Prices for India (SPASTT01INM661N)",
+  "source_last_updated": "Oct 15, 2026 3:39 PM CDT",
+  "usage_note": "OECD citation required; retain source attribution. Monthly observations are period labels, not publication timestamps. No daily benchmark identity is implied.",
+  "source_url": "https://fred.stlouisfed.org/series/SPASTT01INM661N",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SPASTT01INM661N&cosd=2000-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T07:04:51Z",
+  "sha256": "9c56508f1a6d84bb87d009516174291f1b4a279560757e60233e9a7d0e851fbb",
+  "provider": "FRED",
+  "original_provider": "OECD",
+  "definition": "OECD Financial Market: Share Prices, normalized monthly index (2015=100). This is the OECD country share-price series, not a daily named FTSE/DAX/CAC/TSX/ASX/KOSPI/Nifty/CSI benchmark or total-return index."
+}

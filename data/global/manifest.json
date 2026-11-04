@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_version": "cf6af61b855b2aea5867",
-  "generated_at_utc": "2026-11-04T06:12:51Z",
+  "dataset_version": "71730903071d167cfd16",
+  "generated_at_utc": "2026-11-04T07:05:02Z",
   "countries": [
     "AU",
     "CA",
@@ -33,7 +33,7 @@
   ],
   "files": {
     "README.txt": {
-      "sha256": "465c9b66f86384d6fe1c0cdddb3a8f62acae0f4b7112d0008216706705f96c06",
+      "sha256": "6dd14d1ba243e11302cca2ff51c082eca59ab4a298851e73cadabf7ffc85528c",
       "bytes": 991
     },
     "coverage.csv": {
@@ -41,40 +41,40 @@
       "bytes": 10693
     },
     "dataset.sql.gz": {
-      "sha256": "5e7f16fc0088f99cb64bcdd04ff993e6174d913dd1c20046421b3f2c2aca35b5",
-      "bytes": 1581102
+      "sha256": "920757d233c3abf619e850ffc150236afaf1f3d075bb1dfafcbd5e9db641cb99",
+      "bytes": 1580987
     },
     "dataset.sqlite": {
-      "sha256": "588cb445c3791bddf2996c0854d1c364ff5e82db8fd9e50430a733b9413ae019",
+      "sha256": "71db5eb1b17a8c44f299a8f22b6f19c1aa702cc4c1d231c4df0bfb909908bedf",
       "bytes": 41385984
     },
     "dictionary.csv": {
-      "sha256": "35595045bb99f298bc06e469aab3928c07cc251b466de7d0dfdccfc331d60565",
+      "sha256": "e210c6e4cb86d6ba64ae4e670df82cc645e5992386fa4f75761200eb226ef0ed",
       "bytes": 71350
     },
     "dictionary.json": {
-      "sha256": "c0754db4cb2cc48355c6764a49165567ac6ef774630453833565f0bb763b58ee",
+      "sha256": "4f522185e4b0213d86735bc7e35690c64219d62b6083fc1ad4b2ccd3e7b1f737",
       "bytes": 132053
     },
     "global_macro.xlsx": {
-      "sha256": "afa14cff7770d2b4f9400c436c6d29104a29bb256b8fae644e3f59d1ccd675e2",
-      "bytes": 4685534
+      "sha256": "90bf7cf31bf271c02bd680d9e09d3969cba6974b3674f5155cfd86602ad450c4",
+      "bytes": 4685522
     },
     "observations.csv.gz": {
-      "sha256": "f1c454480120b841a899f62dd98ccdcf6f82d962d03de1e359f5fc813cdd5418",
-      "bytes": 1506918
+      "sha256": "e163ff14d1632915af79eb790a1b0ede09a7b466520087408c0b75621fe04885",
+      "bytes": 1506848
     },
     "observations.jsonl.gz": {
-      "sha256": "77c0dbc8ed417d7b3fd48f160d29b2241050f0a62fafc1180bfe89425ab57739",
-      "bytes": 1720419
+      "sha256": "dc5a29f7bc60b23766795c1de3c0a7655c5053d320f56e5a34f44c1f78f161d0",
+      "bytes": 1720355
     },
     "observations.parquet": {
-      "sha256": "d4ae89b17c398700fb82e8009e62c08564b5077e51145cf5553b6bbc424b36dd",
-      "bytes": 1733016
+      "sha256": "48a1a89fa2d8f5f35c87945c4fe6dca7ecaabc7872e0a435b986cf72aeaaec3f",
+      "bytes": 1732932
     },
     "bundle.zip": {
-      "sha256": "4ba301b6bcb5435b6fc7aa006971bb69ac0c3c7f6a01e0b34c9dfb322bf065f1",
-      "bytes": 15340010
+      "sha256": "2d79adfb92ff3830bca89d151b244624f50eaf149ef160a7d936dfa63cbd1b48",
+      "bytes": 15339829
     }
   }
 }

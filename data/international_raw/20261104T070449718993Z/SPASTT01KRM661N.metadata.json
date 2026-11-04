@@ -1,0 +1,15 @@
+{
+  "unit": "Index 2015=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Financial Market: Share Prices for Korea (SPASTT01KRM661N)",
+  "source_last_updated": "Oct 15, 2026 3:39 PM CDT",
+  "usage_note": "OECD citation required; retain source attribution. Monthly observations are period labels, not publication timestamps. No daily benchmark identity is implied.",
+  "source_url": "https://fred.stlouisfed.org/series/SPASTT01KRM661N",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SPASTT01KRM661N&cosd=2000-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T07:04:51Z",
+  "sha256": "fd9e02c48333e681f0e58bc5519b017740434eaa34bb5f76dad1775d35efd18a",
+  "provider": "FRED",
+  "original_provider": "OECD",
+  "definition": "OECD Financial Market: Share Prices, normalized monthly index (2015=100). This is the OECD country share-price series, not a daily named FTSE/DAX/CAC/TSX/ASX/KOSPI/Nifty/CSI benchmark or total-return index."
+}

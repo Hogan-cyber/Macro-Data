@@ -1,0 +1,12 @@
+{
+  "unit": "Index",
+  "frequency": "Daily, Close",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "CBOE Volatility Index: VIX (VIXCLS)",
+  "source_last_updated": "Nov 3, 2026 8:37 AM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/VIXCLS",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=1999-01-01&coed=2026-11-04",
+  "retrieved_at_utc": "2026-11-04T07:04:13Z",
+  "sha256": "01f374fa2ee98f75834367fd119361b62b0a8de0523b36ae171699c6c54b38f7"
+}
