@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "dataset_version": "3f2f4a41bc5cf9028b04",
+  "generated_at_utc": "2026-11-04T05:44:04Z",
+  "countries": [
+    "AU",
+    "CA",
+    "CN",
+    "DE",
+    "FR",
+    "GB",
+    "HK",
+    "IN",
+    "JP",
+    "KR",
+    "US"
+  ],
+  "series_count": 88,
+  "observation_count": 137788,
+  "valid_observation_count": 132701,
+  "status": "SUCCESS",
+  "failures": [],
+  "limitations": [
+    "Latest-revised observations, not complete historical point-in-time data.",
+    "date identifies the observation period, NOT the publication date. release_date is NULL when unverified.",
+    "Raw frequencies and units are retained. No interpolation, winsorization, forward-fill or automatic frequency conversion.",
+    "OECD monthly share-price indices are normalized broad-market series, not daily FTSE/DAX/etc. index closes.",
+    "Source retrieval time records this system acquisition, not the historical first public release.",
+    "Country coverage and history differ. See dictionary and coverage.csv before joining features."
+  ],
+  "files": {
+    "README.txt": {
+      "sha256": "985bd9a7e8ba46fb22ba81ea6630a851a4641860de3f1e788d49a55c282a57bf",
+      "bytes": 815
+    },
+    "coverage.csv": {
+      "sha256": "3bb9ee4b9ce535e03df6d04cc70f96989cb8d65d81eb261e43641aa023a18027",
+      "bytes": 9131
+    },
+    "dataset.sql.gz": {
+      "sha256": "7096a40e1ab2d0f05b30c59bcd0271d12b42b8c5ff05ef2d2c3f0e9f2509ab82",
+      "bytes": 767374
+    },
+    "dataset.sqlite": {
+      "sha256": "89b42dc8b641e713a8d72c45f0ca1055be2e78bd76f1a697e252c473c51dcf00",
+      "bytes": 23060480
+    },
+    "dictionary.csv": {
+      "sha256": "ade0ef68623c8da05f7da19f0cfeaceb4675485cf0864a9bf1437e0b8ca1c433",
+      "bytes": 57328
+    },
+    "dictionary.json": {
+      "sha256": "4634b225d2ccc2f78fc0ff872606a1ca73a4dfc8a94cee5ea69670a6202fd802",
+      "bytes": 98238
+    },
+    "global_macro.xlsx": {
+      "sha256": "10b9caa22ed712a80c19f4585ef8c709e8f9f414427699e6cd3309c8c80641e0",
+      "bytes": 2561234
+    },
+    "observations.csv.gz": {
+      "sha256": "74dcd5939ace9234d030d2694b266da222366f12dacca99f6490f9b39fc08c24",
+      "bytes": 731455
+    },
+    "observations.jsonl.gz": {
+      "sha256": "b5dd0ecb7461feb95ce07cf4ce8b33bfc462badca0dadd647af208f48a64c8af",
+      "bytes": 844127
+    },
+    "observations.parquet": {
+      "sha256": "025f7726221e9b74d504df48efb4e2b78c5f4c4650f3ca28b0e197f3354610be",
+      "bytes": 788884
+    },
+    "bundle.zip": {
+      "sha256": "15c205bc3a2c4dcb5fffa0781e6d8bc46a0c27b30389b6350b682241a3fcd7d2",
+      "bytes": 7995279
+    }
+  }
+}
