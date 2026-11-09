@@ -6,13 +6,13 @@ CPILFENS,US,核心消费者价格指数（未季调）,macro,Monthly,2000-01-01,
 PCEPI,US,个人消费支出价格指数,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
 PCEPILFE,US,核心个人消费支出价格指数,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
 PPIACO,US,生产者价格指数：所有商品,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
-PAYEMS,US,非农就业总人数,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
-UNRATE,US,失业率 U-3,macro,Monthly,2000-01-01,2026-09-01,320,1,UPDATED
-EMRATIO,US,就业人口比率（16岁及以上）,macro,Monthly,2000-01-01,2026-09-01,320,1,UPDATED
-CIVPART,US,劳动参与率（16岁及以上）,macro,Monthly,2000-01-01,2026-09-01,320,1,UPDATED
-ICSA,US,初次申请失业救济人数,macro,"Weekly, Ending Saturday",2000-01-01,2026-10-24,1400,0,UPDATED
-CCSA,US,持续申请失业救济人数,macro,"Weekly, Ending Saturday",2000-01-01,2026-10-17,1399,0,UPDATED
-CES0500000003,US,私人非农就业平均时薪,macro,Monthly,2006-03-01,2026-09-01,247,0,UPDATED
+PAYEMS,US,非农就业总人数,macro,Monthly,2000-01-01,2026-10-01,322,0,UPDATED
+UNRATE,US,失业率 U-3,macro,Monthly,2000-01-01,2026-10-01,321,1,UPDATED
+EMRATIO,US,就业人口比率（16岁及以上）,macro,Monthly,2000-01-01,2026-10-01,321,1,UPDATED
+CIVPART,US,劳动参与率（16岁及以上）,macro,Monthly,2000-01-01,2026-10-01,321,1,UPDATED
+ICSA,US,初次申请失业救济人数,macro,"Weekly, Ending Saturday",2000-01-01,2026-10-31,1401,0,UPDATED
+CCSA,US,持续申请失业救济人数,macro,"Weekly, Ending Saturday",2000-01-01,2026-10-24,1400,0,UPDATED
+CES0500000003,US,私人非农就业平均时薪,macro,Monthly,2006-03-01,2026-10-01,248,0,UPDATED
 JTSJOL,US,JOLTS 职位空缺,macro,Monthly,2000-12-01,2026-09-01,310,0,UPDATED
 GDPC1,US,实际国内生产总值,macro,Quarterly,2000-01-01,2026-07-01,107,0,UPDATED
 GDP,US,名义国内生产总值,macro,Quarterly,2000-01-01,2026-07-01,107,0,UPDATED
@@ -21,33 +21,33 @@ INDPRO,US,工业生产指数,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
 RSAFS,US,零售及餐饮销售额,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
 HOUST,US,新屋开工数量,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
 PERMIT,US,新住宅建筑许可数量,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
-DFF,US,有效联邦基金利率（日频）,macro,"Daily, 7-Day",2000-01-01,2026-11-02,9803,0,UPDATED
-DGS3MO,US,3 个月美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-02,6712,289,UPDATED
-DGS2,US,2 年美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-02,6712,289,UPDATED
-DGS5,US,5 年美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-02,6712,289,UPDATED
-DGS10,US,10 年美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-02,6712,289,UPDATED
-DGS30,US,30 年美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-02,6712,289,UPDATED
-DFII10,US,10 年通胀保值国债实际收益率,macro,Daily,2003-01-02,2026-11-02,5963,255,UPDATED
-T10Y2Y,US,10 年与 2 年国债收益率差,macro,Daily,2000-01-03,2026-11-03,6713,289,UPDATED
-T10Y3M,US,10 年与 3 个月国债收益率差,macro,Daily,2000-01-03,2026-11-03,6713,289,UPDATED
-NASDAQCOM,US,纳斯达克综合指数,equity_index,"Daily, Close",2000-01-03,2026-11-03,6751,250,UPDATED
-NASDAQ100,US,纳斯达克 100 指数,equity_index,"Daily, Close",2000-01-03,2026-11-03,6751,250,UPDATED
-NASDAQSOX,US,PHLX 半导体指数（SOX）,equity_index,Daily,2004-09-02,2026-11-03,5451,333,UPDATED
-SP500,US,标普 500 指数,equity_index,"Daily, Close",2016-10-27,2026-11-02,2517,96,UPDATED
-VIXCLS,US,CBOE VIX 波动率指数,macro,"Daily, Close",2000-01-03,2026-11-02,6783,218,UPDATED
+DFF,US,有效联邦基金利率（日频）,macro,"Daily, 7-Day",2000-01-01,2026-11-05,9806,0,UPDATED
+DGS3MO,US,3 个月美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-05,6715,289,UPDATED
+DGS2,US,2 年美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-05,6715,289,UPDATED
+DGS5,US,5 年美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-05,6715,289,UPDATED
+DGS10,US,10 年美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-05,6715,289,UPDATED
+DGS30,US,30 年美债恒定期限收益率,macro,Daily,2000-01-03,2026-11-05,6715,289,UPDATED
+DFII10,US,10 年通胀保值国债实际收益率,macro,Daily,2003-01-02,2026-11-05,5966,255,UPDATED
+T10Y2Y,US,10 年与 2 年国债收益率差,macro,Daily,2000-01-03,2026-11-06,6716,289,UPDATED
+T10Y3M,US,10 年与 3 个月国债收益率差,macro,Daily,2000-01-03,2026-11-06,6716,289,UPDATED
+NASDAQCOM,US,纳斯达克综合指数,equity_index,"Daily, Close",2000-01-03,2026-11-06,6754,250,UPDATED
+NASDAQ100,US,纳斯达克 100 指数,equity_index,"Daily, Close",2000-01-03,2026-11-06,6754,250,UPDATED
+NASDAQSOX,US,PHLX 半导体指数（SOX）,equity_index,Daily,2004-09-02,2026-11-06,5454,333,UPDATED
+SP500,US,标普 500 指数,equity_index,"Daily, Close",2016-10-27,2026-11-05,2520,96,UPDATED
+VIXCLS,US,CBOE VIX 波动率指数,macro,"Daily, Close",2000-01-03,2026-11-05,6786,218,UPDATED
 DTWEXBGS,US,贸易加权广义美元指数,macro,Daily,2006-01-02,2026-10-30,5222,213,UPDATED
 DEXCHUS,US,人民币兑一美元即期汇率,macro,Daily,2000-01-03,2026-10-30,6728,272,UPDATED
-DCOILWTICO,US,WTI 原油库欣现货价格,macro,Daily,2000-01-04,2026-10-27,6347,650,UPDATED
-DCOILBRENTEU,US,欧洲布伦特原油现货价格,macro,Daily,2000-01-04,2026-10-27,6496,501,UPDATED
+DCOILWTICO,US,WTI 原油库欣现货价格,macro,Daily,2000-01-04,2026-11-03,6352,650,UPDATED
+DCOILBRENTEU,US,欧洲布伦特原油现货价格,macro,Daily,2000-01-04,2026-11-03,6501,501,UPDATED
 M2SL,US,M2 货币供应量,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
-WALCL,US,美联储总资产,macro,"Weekly, As of Wednesday",2002-12-18,2026-10-28,1246,0,UPDATED
-BAMLC0A0CM,US,ICE BofA 美国企业债期权调整利差,macro,"Daily, Close",2023-10-27,2026-11-02,789,9,UPDATED
-BAMLH0A0HYM2,US,ICE BofA 美国高收益债期权调整利差,macro,"Daily, Close",2023-10-27,2026-11-02,790,8,UPDATED
+WALCL,US,美联储总资产,macro,"Weekly, As of Wednesday",2002-12-18,2026-11-04,1247,0,UPDATED
+BAMLC0A0CM,US,ICE BofA 美国企业债期权调整利差,macro,"Daily, Close",2023-10-27,2026-11-05,792,9,UPDATED
+BAMLH0A0HYM2,US,ICE BofA 美国高收益债期权调整利差,macro,"Daily, Close",2023-10-27,2026-11-05,793,8,UPDATED
 CPI_YOY,US,CPI 同比（未季调指数计算）,macro,Monthly,2000-01-01,2026-09-01,320,1,UPDATED
 CORE_CPI_YOY,US,核心 CPI 同比（未季调指数计算）,macro,Monthly,2000-01-01,2026-09-01,320,1,UPDATED
 PCE_YOY,US,PCE 价格同比,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
 CORE_PCE_YOY,US,核心 PCE 价格同比,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
-PAYEMS_CHANGE,US,非农就业月度净增人数,macro,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
+PAYEMS_CHANGE,US,非农就业月度净增人数,macro,Monthly,2000-01-01,2026-10-01,322,0,UPDATED
 SPASTT01JPM661N,JP,日本 OECD 股价指数（月度）,equity_index,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
 SPASTT01GBM661N,GB,英国 OECD 股价指数（月度）,equity_index,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
 SPASTT01DEM661N,DE,德国 OECD 股价指数（月度）,equity_index,Monthly,2000-01-01,2026-09-01,321,0,UPDATED
@@ -87,20 +87,20 @@ WB_CN_UNEMPLOYMENT,CN,中国失业率（ILO 年度模型估计）,macro,Annual,2
 WB_HK_GDP_GROWTH,HK,中国香港实际 GDP 增长（年度）,macro,Annual,2000-01-01,2025-01-01,26,0,UPDATED
 WB_HK_CPI_INFLATION,HK,中国香港消费价格通胀（年度）,macro,Annual,2000-01-01,2025-01-01,26,0,UPDATED
 WB_HK_UNEMPLOYMENT,HK,中国香港失业率（ILO 年度模型估计）,macro,Annual,2000-01-01,2025-01-01,26,0,UPDATED
-HSI,HK,Hang Seng Index,equity_index,"Daily, Close",2000-01-03,2026-11-03,6612,79,UPDATED
-NIKKEI225,JP,Nikkei 225,equity_index,"Daily, Close",2000-01-04,2026-11-02,6571,122,UPDATED
-DAX,DE,DAX gross total return,equity_index,"Daily, Close",2000-01-03,2026-11-03,6816,43,UPDATED
-FTSE100,GB,FTSE 100,equity_index,"Daily, Close",2000-01-04,2026-11-03,6780,50,UPDATED
-CAC40,FR,CAC 40,equity_index,"Daily, Close",2000-01-03,2026-11-03,6860,36,UPDATED
-TSX,CA,S&P/TSX Composite,equity_index,"Daily, Close",2000-01-04,2026-11-03,6741,45,UPDATED
-ASX200,AU,S&P/ASX 200,equity_index,"Daily, Close",2000-01-04,2026-11-03,6783,45,UPDATED
-KOSPI,KR,KOSPI Composite,equity_index,"Daily, Close",2000-01-04,2026-11-03,6607,100,UPDATED
-NIFTY50,IN,NIFTY 50,equity_index,"Daily, Close",2007-09-17,2026-11-03,4693,31,UPDATED
-STI,SG,Straits Times Index,equity_index,"Daily, Close",2000-01-03,2026-11-03,6720,76,UPDATED
-TAIEX,TW,Taiwan Capitalization Weighted Index,equity_index,"Daily, Close",2000-01-04,2026-11-03,6578,98,UPDATED
-DJIA,US,Dow Jones Industrial Average,equity_index,"Daily, Close",2000-01-03,2026-11-03,6750,0,UPDATED
-CSI300,CN,CSI 300,equity_index,"Daily, Close",2005-01-04,2026-11-03,5301,0,UPDATED
-CSI500,CN,CSI 500,equity_index,"Daily, Close",2005-01-04,2026-11-03,5301,0,UPDATED
-CSI1000,CN,CSI 1000,equity_index,"Daily, Close",2005-01-04,2026-11-03,5301,0,UPDATED
-SSE_COMPOSITE,CN,Shanghai Composite,equity_index,"Daily, Close",2000-01-04,2026-11-03,6501,0,UPDATED
-SZSE_COMPONENT,CN,Shenzhen Component,equity_index,"Daily, Close",2000-01-04,2026-11-03,6501,0,UPDATED
+HSI,HK,Hang Seng Index,equity_index,"Daily, Close",2000-01-03,2026-11-06,6615,79,UPDATED
+NIKKEI225,JP,Nikkei 225,equity_index,"Daily, Close",2000-01-04,2026-11-06,6574,122,UPDATED
+DAX,DE,DAX gross total return,equity_index,"Daily, Close",2000-01-03,2026-11-06,6819,43,UPDATED
+FTSE100,GB,FTSE 100,equity_index,"Daily, Close",2000-01-04,2026-11-06,6783,50,UPDATED
+CAC40,FR,CAC 40,equity_index,"Daily, Close",2000-01-03,2026-11-06,6863,36,UPDATED
+TSX,CA,S&P/TSX Composite,equity_index,"Daily, Close",2000-01-04,2026-11-06,6744,45,UPDATED
+ASX200,AU,S&P/ASX 200,equity_index,"Daily, Close",2000-01-04,2026-11-06,6786,45,UPDATED
+KOSPI,KR,KOSPI Composite,equity_index,"Daily, Close",2000-01-04,2026-11-06,6610,100,UPDATED
+NIFTY50,IN,NIFTY 50,equity_index,"Daily, Close",2007-09-17,2026-11-08,4697,31,UPDATED
+STI,SG,Straits Times Index,equity_index,"Daily, Close",2000-01-03,2026-11-06,6723,76,UPDATED
+TAIEX,TW,Taiwan Capitalization Weighted Index,equity_index,"Daily, Close",2000-01-04,2026-11-06,6581,98,UPDATED
+DJIA,US,Dow Jones Industrial Average,equity_index,"Daily, Close",2000-01-03,2026-11-06,6753,0,UPDATED
+CSI300,CN,CSI 300,equity_index,"Daily, Close",2005-01-04,2026-11-06,5304,0,UPDATED
+CSI500,CN,CSI 500,equity_index,"Daily, Close",2005-01-04,2026-11-06,5304,0,UPDATED
+CSI1000,CN,CSI 1000,equity_index,"Daily, Close",2005-01-04,2026-11-06,5304,0,UPDATED
+SSE_COMPOSITE,CN,Shanghai Composite,equity_index,"Daily, Close",2000-01-04,2026-11-06,6504,0,UPDATED
+SZSE_COMPONENT,CN,Shenzhen Component,equity_index,"Daily, Close",2000-01-04,2026-11-06,6504,0,UPDATED

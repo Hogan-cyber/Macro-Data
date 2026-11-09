@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily, 7-Day",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Federal Funds Effective Rate (DFF)",
+  "source_last_updated": "Nov 6, 2026 4:05 PM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DFF",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1999-01-01&coed=2026-11-09",
+  "retrieved_at_utc": "2026-11-09T03:09:01Z",
+  "sha256": "03f46842c4d140639114af1cc8331c844cb01086c681de08fca04b7953b0c5bd"
+}

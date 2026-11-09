@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Market Yield on U.S. Treasury Securities at 2-Year Constant Maturity, Quoted on an Investment Basis (DGS2)",
+  "source_last_updated": "Nov 6, 2026 4:05 PM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DGS2",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=1999-01-01&coed=2026-11-09",
+  "retrieved_at_utc": "2026-11-09T03:09:01Z",
+  "sha256": "41cb5c249d97659f00714fae60afd8fc0fffc5d154bfa390e91fb94e1a0e4e1d"
+}

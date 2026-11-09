@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Market Yield on U.S. Treasury Securities at 3-Month Constant Maturity, Quoted on an Investment Basis (DGS3MO)",
+  "source_last_updated": "Nov 6, 2026 4:05 PM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DGS3MO",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3MO&cosd=1999-01-01&coed=2026-11-09",
+  "retrieved_at_utc": "2026-11-09T03:09:01Z",
+  "sha256": "5ab017457596d3b0a8b60f19d174d3a27c5f4779199c926bc99f8e9df05538cb"
+}

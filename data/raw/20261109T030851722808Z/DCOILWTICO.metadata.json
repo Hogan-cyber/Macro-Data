@@ -1,0 +1,12 @@
+{
+  "unit": "Dollars per Barrel",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Crude Oil Prices: West Texas Intermediate (WTI) - Cushing, Oklahoma (DCOILWTICO)",
+  "source_last_updated": "Nov 4, 2026 12:18 PM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DCOILWTICO",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=1999-01-01&coed=2026-11-09",
+  "retrieved_at_utc": "2026-11-09T03:09:10Z",
+  "sha256": "7db9f22fb6a84cadeb0d191549cf48027d8fed1d169b7155d6b45208d7523e58"
+}

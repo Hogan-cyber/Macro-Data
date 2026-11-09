@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed (DFII10)",
+  "source_last_updated": "Nov 6, 2026 4:05 PM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DFII10",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=1999-01-01&coed=2026-11-09",
+  "retrieved_at_utc": "2026-11-09T03:09:05Z",
+  "sha256": "4a0fb7917211c53d08a09f61cc1ee1d2d98953ff99e94dbdfa7bfdf5cea3eff5"
+}
