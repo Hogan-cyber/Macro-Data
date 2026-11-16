@@ -1,0 +1,12 @@
+{
+  "unit": "Millions of U.S. Dollars",
+  "frequency": "Weekly, As of Wednesday",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Assets: Total Assets: Total Assets (Less Eliminations from Consolidation): Wednesday Level (WALCL)",
+  "source_last_updated": "Nov 12, 2026 3:32 PM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/WALCL",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WALCL&cosd=1999-01-01&coed=2026-11-16",
+  "retrieved_at_utc": "2026-11-16T03:20:39Z",
+  "sha256": "9c9ae53f712d5e2f7ec4aa10d30450630e44b4440f307176756d64ffffac7b55"
+}

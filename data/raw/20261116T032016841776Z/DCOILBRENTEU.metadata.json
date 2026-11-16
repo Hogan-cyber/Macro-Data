@@ -1,0 +1,12 @@
+{
+  "unit": "Dollars per Barrel",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Crude Oil Prices: Brent - Europe (DCOILBRENTEU)",
+  "source_last_updated": "Nov 12, 2026 7:31 PM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DCOILBRENTEU",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&cosd=1999-01-01&coed=2026-11-16",
+  "retrieved_at_utc": "2026-11-16T03:20:39Z",
+  "sha256": "9c0db7e33df78f75942c1d4b6c45f293014266ed300fe9a10c25cf6f254373fb"
+}

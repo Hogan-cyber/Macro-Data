@@ -1,0 +1,12 @@
+{
+  "unit": "Percent",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Unemployment Rate (UNRATE)",
+  "source_last_updated": "Nov 6, 2026 9:43 AM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/UNRATE",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=1999-01-01&coed=2026-11-16",
+  "retrieved_at_utc": "2026-11-16T03:20:22Z",
+  "sha256": "ab27f73e3460bbdb38f026150f8d4e2119e10069fdf6566c04c33eec9038f7af"
+}

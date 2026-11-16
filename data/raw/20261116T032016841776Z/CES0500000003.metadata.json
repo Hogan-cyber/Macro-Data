@@ -1,0 +1,12 @@
+{
+  "unit": "Dollars per Hour",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Average Hourly Earnings of All Employees, Total Private (CES0500000003)",
+  "source_last_updated": "Nov 6, 2026 9:42 AM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/CES0500000003",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CES0500000003&cosd=1999-01-01&coed=2026-11-16",
+  "retrieved_at_utc": "2026-11-16T03:20:23Z",
+  "sha256": "1f6811dd492c4f3ec927753758592a10c94d9b3fa9169b94aa171218e2e09264"
+}

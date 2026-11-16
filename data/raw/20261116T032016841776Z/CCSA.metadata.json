@@ -1,0 +1,12 @@
+{
+  "unit": "Number",
+  "frequency": "Weekly, Ending Saturday",
+  "seasonal_adjustment": "Seasonally Adjusted",
+  "source_title": "Continued Claims (Insured Unemployment) (CCSA)",
+  "source_last_updated": "Nov 12, 2026 7:37 AM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/CCSA",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CCSA&cosd=1999-01-01&coed=2026-11-16",
+  "retrieved_at_utc": "2026-11-16T03:20:23Z",
+  "sha256": "a7d4bb7a66c22d5fd57ed1237ef2a471307db4658a7141f0d3d98c857f28d840"
+}

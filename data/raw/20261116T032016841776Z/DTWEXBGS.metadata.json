@@ -1,0 +1,12 @@
+{
+  "unit": "Index Jan 2006=100",
+  "frequency": "Daily",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Nominal Broad U.S. Dollar Index (DTWEXBGS)",
+  "source_last_updated": "Nov 9, 2026 3:16 PM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/DTWEXBGS",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=1999-01-01&coed=2026-11-16",
+  "retrieved_at_utc": "2026-11-16T03:20:36Z",
+  "sha256": "448522e5b4b78d787e08edd86028dfe67a92c4aeab1aded9266304d6c71f19bc"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_version": "a81f4649ee7d2d3c7dd4",
-  "generated_at_utc": "2026-11-09T03:09:51Z",
+  "dataset_version": "53e734059e2989f5ab7e",
+  "generated_at_utc": "2026-11-16T03:22:17Z",
   "countries": [
     "AU",
     "CA",
@@ -18,10 +18,135 @@
     "US"
   ],
   "series_count": 105,
-  "observation_count": 246048,
-  "valid_observation_count": 240236,
-  "status": "SUCCESS",
-  "failures": [],
+  "observation_count": 246240,
+  "valid_observation_count": 240418,
+  "status": "PARTIAL",
+  "failures": [
+    {
+      "series_id": "WB_JP_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_JP_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_JP_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_GB_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_GB_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_GB_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_DE_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_DE_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_DE_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_FR_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_FR_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_FR_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_CA_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_CA_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_CA_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_AU_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_AU_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_AU_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_KR_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_KR_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_KR_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_IN_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_IN_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_IN_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_CN_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_CN_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_CN_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_HK_GDP_GROWTH",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_HK_CPI_INFLATION",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "WB_HK_UNEMPLOYMENT",
+      "error": "The read operation timed out"
+    },
+    {
+      "series_id": "NIFTY50",
+      "error": "Source response lost 1 saved dates; retained previous series"
+    }
+  ],
   "limitations": [
     "Latest-revised observations, not complete historical point-in-time data.",
     "date identifies the observation period, NOT the publication date. release_date is NULL when unverified.",
@@ -33,48 +158,48 @@
   ],
   "files": {
     "README.txt": {
-      "sha256": "0103105a025493f7afb3c49a234a53a53dd3afe9b7c88692d3bd3ae8f2eb9850",
+      "sha256": "2ac89bdf13961803fef622776a6eec61f783f8684ed0c669a1380b390328c4df",
       "bytes": 991
     },
     "coverage.csv": {
-      "sha256": "af7656cdc9b34fa86451e44eaa1ec279f1cb12fd2c8f5e2e71aebaa4ec3c799a",
-      "bytes": 10693
+      "sha256": "897334d6fc6697fe7d9181a95ceb743641202b34aa4e4f7cf0fa6a19ef91cab7",
+      "bytes": 10941
     },
     "dataset.sql.gz": {
-      "sha256": "8ef6b03b3e8977d85c8be4c9ffed98cf1ab08cc20ccdb5120b11ddc5230cfb16",
-      "bytes": 1582049
+      "sha256": "9ef46a6bad6209cd171d7ac775aa0ae85c7bd5835cf5c6573b0dc73751f5673d",
+      "bytes": 1583376
     },
     "dataset.sqlite": {
-      "sha256": "b6c9b7b7d5ac68b4a263da5549437d6193e71c55c729d21355c9ac6cefcce2ac",
-      "bytes": 41410560
+      "sha256": "92a65402b1c73f7b312b86be4a60442cecd1cc72c37c9ad24f0c11255d609d52",
+      "bytes": 41512960
     },
     "dictionary.csv": {
-      "sha256": "78def0323484f3b8d762144396bf2dbda145a4f3ac9c37bbc53a5930ecb32229",
-      "bytes": 71345
+      "sha256": "462d184457e3a171f8277535ba32d5a377af807f8319609803e0ebb75710568c",
+      "bytes": 71610
     },
     "dictionary.json": {
-      "sha256": "e2ae635d55188e9462ab6072c1e59d904a09bc24822dd172d0aa837dff659e8f",
-      "bytes": 132048
+      "sha256": "56dfd8b89d0d37a39313a50e7417b311459e8af03594690055d92ae25fa6c04e",
+      "bytes": 132313
     },
     "global_macro.xlsx": {
-      "sha256": "35fa56638373cb8f464c60092327ef0dbbd1293a4ba29c005dca6b1ca0413c0a",
-      "bytes": 4687815
+      "sha256": "f48ee29923207de8075c98463efa0fc3b613b576ec4bc68070023a3f8e26bf06",
+      "bytes": 4691764
     },
     "observations.csv.gz": {
-      "sha256": "a8e84c61c119ac6928f72cd2ae510b406575ec44d9d65312c2a1af3307cf88ed",
-      "bytes": 1507570
+      "sha256": "1fcd2ce332e9ba8008be269e60d450041842a1c214dce0721bec4420faf83e4e",
+      "bytes": 1509513
     },
     "observations.jsonl.gz": {
-      "sha256": "b055bf1209c8fd92c95d584270027e18cebf1c31cdc87ef14bd411d3c4e830b3",
-      "bytes": 1721274
+      "sha256": "25de4a0342f2f5c4db1248d4bfe9eba4ee07a135eaf75daabfa0d5425d9f87e1",
+      "bytes": 1722733
     },
     "observations.parquet": {
-      "sha256": "7602f529ba3ead52595ee78018525a3caae4daa0286ea262f2de0275ff9ef827",
-      "bytes": 1737337
+      "sha256": "639d888c65b6ac41378909fee1ca2da046d3af1a10ca84b626fff70a7c79bb9b",
+      "bytes": 1748205
     },
     "bundle.zip": {
-      "sha256": "2131b17141fb6d2cb982c799c44cdd1ea7f221ff9b95757acc1059b61960d413",
-      "bytes": 15257685
+      "sha256": "455f7aae16da836c78b747a0340b4934132710f84034950858779426406da3a6",
+      "bytes": 15350597
     }
   }
 }

@@ -1,0 +1,12 @@
+{
+  "unit": "Index 1982-1984=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (CPIAUCNS)",
+  "source_last_updated": "Nov 10, 2026 8:12 AM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/CPIAUCNS",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1999-01-01&coed=2026-11-16",
+  "retrieved_at_utc": "2026-11-16T03:20:20Z",
+  "sha256": "9644977bd6dcd4bd3191588ef517f94ac91d6e2eff35ef6c8ab81144f3e53b52"
+}

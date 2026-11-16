@@ -1,0 +1,12 @@
+{
+  "unit": "Index 1982-1984=100",
+  "frequency": "Monthly",
+  "seasonal_adjustment": "Not Seasonally Adjusted",
+  "source_title": "Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average (CPILFENS)",
+  "source_last_updated": "Nov 10, 2026 8:13 AM CST",
+  "usage_note": "Review original source terms",
+  "source_url": "https://fred.stlouisfed.org/series/CPILFENS",
+  "download_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPILFENS&cosd=1999-01-01&coed=2026-11-16",
+  "retrieved_at_utc": "2026-11-16T03:20:21Z",
+  "sha256": "f3fdb8e385d1803095ab5a95f5142a1f989f6747f85e05bf4af51a8d32fbbcf1"
+}
